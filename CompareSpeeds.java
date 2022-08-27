@@ -58,7 +58,9 @@ public class CompareSpeeds
         slowest = 0;
         fastest = Long.MAX_VALUE;
 
-		// dupliquer les lignes 26 à 53 pour les autres algorithmes à tester
+		// dupliquer les lignes 30 à 59 pour les autres algorithmes à tester (ou créer un
+        // menu de sélection et les tester un par un sans dupliquer le code du test à 
+        // part les lignes 38, 40 et 41)
 	}
 
     // définir les autres fonctions ici (ou créer des instances dans main() si elles sont
