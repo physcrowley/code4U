@@ -8,5 +8,4 @@ public class RunBase {
         System.out.println("Recursivité");
         Recursion.recurse( val );
     }
-    
 }

@@ -21,7 +21,7 @@ Des exemples de **projets orienté-objet** se trouvent *dans des sous-dossiers* 
 
 L'idéal est toujours d'ouvrir le package voulu à sa racine.
 
-Pour compiler et lancer des programmes où les fichiers se trouvent dans différents packages ou sous-packages, il faut inclure chaque package dans la commande javac, p. ex. pour lancer le programme RunBase, il faut d'abord le compiler comme ceci :
+Pour compiler et lancer des programmes où les fichiers se trouvent dans différents packages ou sous-packages, il faut inclure chaque package dans la commande javac, p. ex. pour lancer le programme `RunBase`, il faut d'abord le compiler comme ceci :
 
 ```bash
 javac *.java .\base\*.java
