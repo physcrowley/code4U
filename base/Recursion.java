@@ -4,13 +4,6 @@ package base;
  * @author physcrowley (2022-10)
  */
 public class Recursion {
-    public static void main(String[] args) {
-        int val = 9;
-        System.out.println("Boucle");
-        loop( val );
-        System.out.println("Recursivité");
-        recurse( val );
-    }
 
     /**
      * Affiche les nombres de 1 à n sur des lignes séparées
