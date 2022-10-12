@@ -42,6 +42,7 @@ public class RunBase {
         while ( fileReader.hasNextLine() && n < 100 )
         {
             students[ n ] = new Struct(); // un nouveau Struct à l'index n
+            // extraires les valeurs pour cet élève
             students[ n ].name = fileReader.next();
             students[ n ].schoolYear = fileReader.nextInt();
             students[ n ].average = fileReader.nextDouble();
