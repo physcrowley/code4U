@@ -3,3 +3,6 @@
 
 javac ./base/*.java RunBase.java
 java RunBase
+
+# Note : si tous les fichiers sont déjà compilés, c'est plus vite de simplement
+# lancer `java RunBase` au lieu de lancer ce script
