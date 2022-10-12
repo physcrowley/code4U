@@ -1,0 +1,4 @@
+Nancy 11 87
+Jimmy 9 79,5
+Réjean 12 91
+Roseanne 10 88,1
