@@ -1,5 +1,5 @@
 # Exemples de code pour le cours ICS4U
-> version 2022-08
+> version 2022-10
 
 ## Utilisation
 
@@ -24,7 +24,7 @@ L'idéal est toujours d'ouvrir le package voulu à sa racine.
 Pour compiler et lancer des programmes où les fichiers se trouvent dans différents packages ou sous-packages, il faut inclure chaque package dans la commande javac, p. ex. pour lancer le programme `RunBase`, il faut d'abord le compiler comme ceci :
 
 ```bash
-javac *.java .\base\*.java
+javac *.java ./base/*.java
 ```
 ensuite on peut le lancer comme d'habitude avec :
 
