@@ -50,8 +50,8 @@ public class RunBase {
         // Afficher quelques données
         System.out.println( "Noms des " + i + " élèves :" );
         System.out.print("\n\t");
-        for ( int j = 0; j < i; j++ ) {
-            System.out.print( students[ i ].name + " " );
+        for ( int s = 0; s < i; s++ ) {
+            System.out.print( students[ s ].name + " " );
         }
         System.out.println("\n");
     }
