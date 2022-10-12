@@ -49,6 +49,7 @@ public class RunBase {
             fileReader.nextLine(); 
             n++;
         }
+        fileReader.close();
 
         // Afficher quelques données
         System.out.println( "Noms des " + n + " élèves :" );
