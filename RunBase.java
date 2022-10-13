@@ -14,10 +14,10 @@ public class RunBase {
         // recursion();
 
         // exemple d'usage d'un objet pour organiser les données
-        // struct();
+        struct();
 
         // exemple de différents types de méthodes
-        methods();
+        // methods();
     }
 
     /** Utilise les méthodes du module {@link base.Recursion} */
@@ -34,7 +34,7 @@ public class RunBase {
     static void struct()
     {
         // tenter de lire le fichier de données
-        String file = "./data/struct.txt";
+        String file = "./data/base_struct.txt";
         Scanner fileReader;
         try {
             fileReader = new Scanner( new File( file ) );
