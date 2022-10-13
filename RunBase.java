@@ -76,6 +76,10 @@ public class RunBase {
 
     /** Utilise les différentes formes de méthodes dans {@link base.Methods} */
     static void methods(){
+        /*
+         * Ici, les appels de fonctions assignent les valeurs de retour à des
+         * variables et fournissent des valeurs à assigner aux paramètres.
+         */
         Methods.greet();
         String name = Methods.getName();
         int points = Methods.prize( name );

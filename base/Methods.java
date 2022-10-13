@@ -64,21 +64,17 @@ public class Methods {
         out.append( "\n" + name + ", votre nom vous mérite cette pyramide :\n\n" );
         // triangle grandissant
         for ( int i = 1; i <= points; i++ ){
-            for ( int j = 0; j < i; j++ ){
-                out.append( "O" );
-            }
-            out.append( "\n" ); // fin d'une ligne
+            // ligne contenant i * 'O'
+            for ( int j = 0; j < i; j++ ) out.append( 'O' );
+            out.append( '\n' );
         }
         // triangle diminuant
         for ( int i = points - 1; i > 0; i-- ){
-            for ( int j = 0; j < i; j++ ){
-                out.append( "O" );
-            }
-            out.append( "\n" ); // fin d'une ligne
+            // ligne contenant i * 'O'
+            for ( int j = 0; j < i; j++ ) out.append( 'O' );
+            out.append( '\n' );
         }
         return out.toString();
     }
 
-    
-    
 }
