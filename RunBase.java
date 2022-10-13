@@ -10,14 +10,27 @@ import base.*;
 public class RunBase {
     public static void main(String[] args) {
         
+        // exemple de différents types de méthodes
+        methods();
+        
         // exemple de récursivité
         // recursion();
 
         // exemple d'usage d'un objet pour organiser les données
-        struct();
+        // struct();
+    }
 
-        // exemple de différents types de méthodes
-        // methods();
+    /** Utilise les différentes formes de méthodes dans {@link base.Methods} */
+    static void methods(){
+        /*
+         * Ici, les appels de fonctions assignent les valeurs de retour à des
+         * variables et fournissent des valeurs à assigner aux paramètres.
+         */
+        Methods.greet();
+        String name = Methods.getName();
+        int points = Methods.prize( name );
+        String prize = Methods.makePrize( name, points );
+        System.out.println( prize );
     }
 
     /** Utilise les méthodes du module {@link base.Recursion} */
@@ -74,16 +87,4 @@ public class RunBase {
         System.out.printf( "%.1f\n", sum / n );
     }
 
-    /** Utilise les différentes formes de méthodes dans {@link base.Methods} */
-    static void methods(){
-        /*
-         * Ici, les appels de fonctions assignent les valeurs de retour à des
-         * variables et fournissent des valeurs à assigner aux paramètres.
-         */
-        Methods.greet();
-        String name = Methods.getName();
-        int points = Methods.prize( name );
-        String prize = Methods.makePrize( name, points );
-        System.out.println( prize );
-    }
 }
