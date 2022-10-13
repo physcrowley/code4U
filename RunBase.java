@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.Locale;
 import java.util.Scanner;
 
 import base.*;
@@ -31,6 +32,7 @@ public class RunBase {
         Scanner fileReader;
         try {
             fileReader = new Scanner( new File( file ) );
+            fileReader.useLocale( Locale.CANADA ); // le décimal est un point (.)
         } catch ( Exception e ) {
             System.out.println( "Erreur : fichier \"" + file + "\" pas trouvé" );
             return; // quitter en cas d'échec
@@ -63,6 +65,6 @@ public class RunBase {
         System.out.print( "La moyenne de la classe est ");
         double sum = 0;
         for ( int s = 0; s < n; s++ ) sum += students[ s ].average;
-        System.out.printf( "%.1f", sum / n );
+        System.out.printf( "%.1f\n", sum / n );
     }
 }
