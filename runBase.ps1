@@ -1,8 +1,10 @@
-# Commandes Java pour compiler et lancer RunBase
+# Commandes Java pour compiler et lancer RunBase. Les fichiers de code source dans
+# le package base seront également compilés.
 #
 # USAGE : simplement taper `.\runbase.ps1` dans Powershell à partir de ce dossier
 # 
-# sur Bash ou Zsh, taper d'abord `chmod +x ./runBase.ps1` pour rendre le script exécutable
+#     Sur Bash ou Zsh, taper `chmod +x ./runBase.ps1` avant la première utilisation 
+#     pour rendre le script exécutable.
 #
 
 javac ./base/*.java RunBase.java
