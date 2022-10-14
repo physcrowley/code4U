@@ -13,21 +13,36 @@ Ces exemples sont complémentaires aux leçons présentées en classe et sont so
 
 ## Structure
 
-Des exemples de **classes uniques** se trouvent *à la racine de ce dossier* et devraient être copiés et collés dans vos dossiers de projet (en ajoutant la déclaration de `package` de votre projet, au besoin).
+>Le terme `package` utilisé dans les prochains paragraphes veut essentiellement dire "sous-dossier". Un package est un emballage Java pour des sous-dossiers.
 
-Des exemples de **projets orienté-objet** se trouvent *dans des sous-dossiers* et devraient être ouverts comme dossier racine dans votre éditeur de code afin de respecter les déclarations de package dans chacun des projets.
+Des exemples de **classes uniques** se trouvent *dans le package "other"* et devraient être copiés et collés dans vos dossiers de projet (en ajustant la déclaration de `package` pour correspondre à votre structure de projet, au besoin). Ces classes contiennent toutes des méthodes `main` et sont autonomes (ne dépendent pas d'autres classes).
 
-## Ouvrir et lancer les programmes
+Des exemples de **projets orienté-objet** se trouvent *dans des packages nommés selon la nature du projet*. Généralement, seulement une des classes dans chaque package contiendra une méthode `main` pour lancer le programme. Les autres classes seront :
 
-L'idéal est toujours d'ouvrir le package voulu à sa racine.
+* des classes qui définissent des objets, des interfaces, des modules ou des structs
+* quelques classes (aussi avec des méthodes `main`) pour tester ces objets, etc.
 
-Pour compiler et lancer des programmes où les fichiers se trouvent dans différents packages ou sous-packages, il faut inclure chaque package dans la commande javac, p. ex. pour lancer le programme `RunBase`, il faut d'abord le compiler comme ceci :
+Il peut aussi y avoir des sous-packages dans les packages d'un projet orienté-objet.
+
+## Modifier les exemples
+
+C'est important de copier le package (dossier) au complet d'un exemple, idéalement avec l'explorateur de fichiers du système d'exploitation, et le coller dans votre propre projet. Vous pourrez alors les compiler et lancer comme décrit ci-dessous, tout en apportant les modifications demandées dans la pratique et les exercices.
+
+## Compiler et lancer les programmes
+
+Tous les programmes dans ce répertoire `code4U` sont structurés dans des packages (avec possiblement des sous-packages) différents. Un package est l'emballage Java pour un dossier.
+
+Pour compiler un programme il faut inclure le chemin au package et utiliser `*.java` comme nom du fichier code source afin que tous les fichiers dans le package soient compilés. P. ex. pour le package `base` on ferait :
 
 ```bash
-javac *.java ./base/*.java
+javac ./base/*.java
 ```
-ensuite on peut le lancer comme d'habitude avec :
+>S'il y a des sous-packages, il faut aussi ajouter le chemin à chaque sous-package dans cette commande, soit `javac [sous-package1]/*.java [sous-package2]/*.java [package]/*.java`
+
+Ensuite pour lancer la classe principale (ou une classe test), il faut spécifier le nom "pleinement qualifié" (le nom complet) de la classe, soit `[package].[Classe]`. P. ex. : pour la classe principale "Run" dans le package "base" :
 
 ```bash
-java RunBase
+java base.Run
 ```
+
+C'est aussi possible d'écrire ces deux commandes dans un script powershell (.ps1) et de lancer le script, p. ex. : le script "runBase.ps1". Lire les commentaires dans ce script pour connaître les détails.
