@@ -1,5 +1,5 @@
-# Commandes Java pour compiler et lancer RunBase. Les fichiers de code source dans
-# le package base seront également compilés.
+# Commandes Java pour compiler et lancer base.RunBase. Les autres fichiers de code
+# source dans le package base seront également compilés.
 #
 # USAGE : simplement taper `.\runbase.ps1` dans Powershell à partir de ce dossier
 # 
@@ -7,8 +7,12 @@
 #     pour rendre le script exécutable.
 #
 
-javac ./base/*.java RunBase.java
-java RunBase
+javac ./base/*.java
+java base.Run
 
-# Note : si tous les fichiers sont déjà compilés, c'est plus vite de simplement
-# lancer `java RunBase` au lieu de lancer ce script
+# Note 1 : si tous les fichiers sont déjà compilés, c'est plus vite de simplement
+# lancer `java base.RunBase` au lieu de lancer ce script
+
+# Note 2 : parce que la classe principale qu'on veut lancer se trouve dans un 
+# package, il faut spécifier le nom "pleinement qualifié" ou le nom complet de
+# la classe, soit [package].[Classe], dans ce cas base.Run

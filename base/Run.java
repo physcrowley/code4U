@@ -1,13 +1,13 @@
+package base;
+
 import java.io.File;
 import java.util.Locale;
 import java.util.Scanner;
 
-import base.*;
-
 /** Classe pour tester et lancer le code dans le package {@code base} 
  * @author physcrowley (2022-10)
 */
-public class RunBase {
+public class Run {
     public static void main(String[] args) {
         
         // exemple de différents types de méthodes
@@ -47,7 +47,8 @@ public class RunBase {
     static void struct()
     {
         // tenter de lire le fichier de données
-        String file = "./data/base_struct.txt";
+        String file = "./data/base_struct.txt"; 
+                      // chemin à partir de la racine du "projet" code4U
         Scanner fileReader;
         try {
             fileReader = new Scanner( new File( file ) );
