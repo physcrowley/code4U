@@ -30,7 +30,7 @@ C'est important de copier le package (dossier) au complet d'un exemple, idéalem
 
 ## Compiler et lancer les programmes
 
-Tous les programmes dans ce répertoire `code4U` sont structurés dans des packages (avec possiblement des sous-packages) différents. Un package est l'emballage Java pour un dossier.
+Tous les programmes dans ce répertoire `code4U` sont structurés dans des packages.
 
 Pour compiler un programme il faut inclure le chemin au package et utiliser `*.java` comme nom du fichier code source afin que tous les fichiers dans le package soient compilés. P. ex. pour le package `base` on ferait :
 
@@ -46,3 +46,5 @@ java base.Run
 ```
 
 C'est aussi possible d'écrire ces deux commandes dans un script powershell (.ps1) et de lancer le script, p. ex. : le script "runBase.ps1". Lire les commentaires dans ce script pour connaître les détails.
+
+>**ATTENTION** : Toutes ces commandes sont lancées dans le Terminal à partir de **la racine du projet**. P.ex. si ce projet se trouve au chemin *~/Documents/code4U* sur le système, le terminal doit être dans ce dossier pour lancer les commandes.
