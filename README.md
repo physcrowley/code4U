@@ -45,6 +45,9 @@ Ensuite pour lancer la classe principale (ou une classe test), il faut spécifie
 java base.Run
 ```
 
-C'est aussi possible d'écrire ces deux commandes dans un script powershell (.ps1) et de lancer le script, p. ex. : le script "runBase.ps1". Lire les commentaires dans ce script pour connaître les détails.
+C'est aussi possible d'écrire ces deux commandes dans un script powershell (.ps1) et de lancer le script, p. ex. : le script "runBase.ps1". Lire les commentaires dans ce script pour connaître les détails. Si le script ne se lance pas avec un message d'erreur lié à l'Execution_Policy, lancer la commande Powershell suivante :
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+```
 
 >**ATTENTION** : Toutes ces commandes sont lancées dans le Terminal à partir de **la racine du projet**. P.ex. si ce projet se trouve au chemin *~/Documents/code4U* sur le système, le terminal doit être dans ce dossier pour lancer les commandes.
