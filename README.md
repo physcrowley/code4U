@@ -37,11 +37,43 @@ Il peut aussi y avoir des sous-packages dans les packages d'un projet orienté-o
 
 </details>
 
+## Projets Maven et "erreurs"
+
+<details>
+    <summary><i>Cliquer pour voir les détails</i></summary>
+
+### Fausses alertes
+
+Tous les projets Maven seront aussi inclus ici dans des sous-dossiers, comme s'ils étaient des packages. Parce qu'ils sont, en fait, des projets distincts, le Java Language Server interprète mal la structure globable du dossier, notamment en suggérant :
+
+* qu'il faut changer les déclarations de package
+* que plusieurs choses ne peuvent pas être "resolved to a type"
+
+Ce sont toutes **des fausses alertes**!
+
+### Solution
+
+Ouvrez simplement le sous-dossier qui contient le projet Maven dans une nouvelle fenêtre VS Code. Le projet étant maintenant à la racine du dossier, tous les outils de construction automatique du projet fonctionneront comme prévu.
+
+### Liste des projets Maven
+
+Ces sous-dossiers sont des projets Maven : `json`
+
+</details>
+
 ## Modifier les exemples
 
 C'est important de copier le package (dossier) au complet d'un exemple, idéalement avec l'explorateur de fichiers du système d'exploitation, et le coller dans votre propre projet. Vous pourrez alors les compiler et lancer comme décrit ci-dessous, tout en apportant les modifications demandées dans la pratique et les exercices.
 
 ## Compiler et lancer les programmes
+
+<details>
+    <summary><i>Projets Maven</i></summary>
+
+> Si le sous-dossier du programme n'est pas un package mais plutôt un projet distinct Maven, simplement ouvrir le sous-dossier dans une nouvelle fenêtre et lancer le programme avec le bouton ou le mot `Run`.
+
+</details>
+<p></p>
 
 Tous les programmes dans ce répertoire `code4U` sont structurés dans des packages.
 
@@ -58,9 +90,18 @@ Ensuite pour lancer la classe principale (ou une classe test), il faut spécifie
 java base.Run
 ```
 
-C'est aussi possible d'écrire ces deux commandes dans un script powershell (.ps1) et de lancer le script, p. ex. : le script "runBase.ps1". Lire les commentaires dans ce script pour connaître les détails. Si le script ne se lance pas avec un message d'erreur lié à l'Execution_Policy, lancer la commande Powershell suivante :
+<details>
+    <summary><i>Script Powershell</i></summary>
+
+C'est aussi possible d'écrire ces deux commandes (javac et java) dans un script powershell (.ps1) et de lancer le script, p. ex. : le script "runBase.ps1". Lire les commentaires dans ce script pour connaître les détails. Si tenter de lancer le script donne un message d'erreur lié à l'Execution_Policy, lancer la commande Powershell suivante :
+
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
+
+Vous aurez maintenant l'autorisation de lancer des scripts sur votre compte.
+
+</details>
+<p></p>
 
 >**ATTENTION** : Toutes ces commandes sont lancées dans le Terminal à partir de **la racine du projet**. P.ex. si ce projet se trouve au chemin *~/Documents/code4U* sur le système, le terminal doit être dans ce dossier pour lancer les commandes.
