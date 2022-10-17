@@ -15,7 +15,7 @@ import com.google.gson.GsonBuilder;
  * L'objet de base est défini dans {@link json.ProjectObject}, incluant ses champs, le
  * constructeur et les accesseurs nécessaires pour cet exemple.
  * <p></p>
- * Les informations de base sur la bibliothèque Gson qui ont renseignées le
+ * Les informations de base sur la bibliothèque Gson qui ont renseigné le
  * développement des exemples dans cette classe se trouvent à l'adresse : 
  * https://github.com/google/gson/blob/master/UserGuide.md
  * <p></p>
