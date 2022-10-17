@@ -40,6 +40,7 @@ public class App {
 
     System.out.println( "Objets Java --> format Json");
     System.out.println( "~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
     String output;
 
     // sortie compact
