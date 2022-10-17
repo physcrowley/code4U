@@ -1,5 +1,8 @@
 package json;
 
+/**
+ * Classe bidon pour l'exemple de Json dans {@link json.App}
+ */
 public class ProjectObject {
     //
     // Champs
