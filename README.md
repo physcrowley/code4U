@@ -3,6 +3,9 @@
 
 ## Utilisation
 
+<details>
+    <summary><i>Cliquer pour voir les détails</i></summary>
+
 Les exemples sont préparés pour téléchargement par les élèves du cours ICS4U de M. Crowley. 
 
 Ces exemples sont complémentaires aux leçons présentées en classe et sont souvent la base des exercices.
@@ -11,7 +14,15 @@ Ces exemples sont complémentaires aux leçons présentées en classe et sont so
 * Si l'enseignant ajoute des nouveaux fichiers, simplement faire un Pull (cliquer sur le bouton synchroniser dans VS Code)
 * Vous ne pouvez pas pousser vos changements dans ce dossier. Le partage se fait à sens unique.
 
+</details>
+
+
+
+
 ## Structure
+
+<details>
+    <summary><i>Cliquer pour voir les détails</i></summary>
 
 >Le terme `package` utilisé dans les prochains paragraphes veut essentiellement dire "sous-dossier". Un package est un emballage Java pour des sous-dossiers.
 
@@ -23,6 +34,8 @@ Des exemples de **projets orienté-objet** se trouvent *dans des packages nommé
 * quelques classes (aussi avec des méthodes `main`) pour tester ces objets, etc.
 
 Il peut aussi y avoir des sous-packages dans les packages d'un projet orienté-objet.
+
+</details>
 
 ## Modifier les exemples
 
