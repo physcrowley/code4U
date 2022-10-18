@@ -55,6 +55,8 @@ Ce sont toutes **des fausses alertes**!
 
 Ouvrez simplement le sous-dossier qui contient le projet Maven dans une nouvelle fenêtre VS Code. Le projet étant maintenant à la racine du dossier, tous les outils de construction automatique du projet fonctionneront comme prévu.
 
+>Si **le problème persiste**, la configuration du workspace a été corrompu. Ouvrir le centre des commandes (Ctrl + Shift + P), taper "Clean...", choisir "Clean Java Language Server Workspace" et accepter de supprimer et recharger l'espace de travail.
+
 ### Liste des projets Maven
 
 Ces sous-dossiers sont des projets Maven : `json`
