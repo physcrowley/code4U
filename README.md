@@ -110,7 +110,7 @@ Vous aurez maintenant l'autorisation de lancer des scripts sur votre compte.
 <details>
     <summary><i>Projets Maven</i></summary>
 
-> Si le sous-dossier du programme n'est pas un package mais plutôt un projet distinct Maven, simplement ouvrir le sous-dossier dans une nouvelle fenêtre et lancer le programme avec le bouton ou le mot `Run`.
+Si le sous-dossier du programme n'est pas un package mais plutôt un projet distinct Maven, simplement ouvrir le sous-dossier dans une nouvelle fenêtre et lancer le programme avec le bouton ou le mot `Run`.
 
 </details>
 
