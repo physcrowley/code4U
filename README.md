@@ -70,12 +70,8 @@ C'est important de copier le package (dossier) au complet d'un exemple, idéalem
 ## Compiler et lancer les programmes
 
 <details>
-    <summary><i>Projets Maven</i></summary>
+    <summary><i>Cas général</i></summary>
 
-> Si le sous-dossier du programme n'est pas un package mais plutôt un projet distinct Maven, simplement ouvrir le sous-dossier dans une nouvelle fenêtre et lancer le programme avec le bouton ou le mot `Run`.
-
-</details>
-<p></p>
 
 Tous les programmes dans ce répertoire `code4U` sont structurés dans des packages.
 
@@ -107,3 +103,46 @@ Vous aurez maintenant l'autorisation de lancer des scripts sur votre compte.
 <p></p>
 
 >**ATTENTION** : Toutes ces commandes sont lancées dans le Terminal à partir de **la racine du projet**. P.ex. si ce projet se trouve au chemin *~/Documents/code4U* sur le système, le terminal doit être dans ce dossier pour lancer les commandes.
+
+</details>
+<p></p>
+
+<details>
+    <summary><i>Projets Maven</i></summary>
+
+> Si le sous-dossier du programme n'est pas un package mais plutôt un projet distinct Maven, simplement ouvrir le sous-dossier dans une nouvelle fenêtre et lancer le programme avec le bouton ou le mot `Run`.
+
+</details>
+
+## Répertoire
+
+Cette section duplique le tableau des matières du [manuel du cours](https://bit.ly/manICS4U) tout en associant les packages et les classes spécifiques qui servent d'exemple pour chaque section.
+
+### Revue
+
+Le package `base` inclut ces éléments.
+
+* Générale
+* Commentaires et documentation
+* Entrée/sortie
+* Tableaux et String
+* Fonctions et récursivité
+
+### Tester les programmes
+
+Le package `testing` inclut ces éléments.
+
+* Résoudre les erreurs
+* Vérifier l'algorithme
+
+### Programmation orienté-objet
+
+#### Préparation à l'orienté-objet
+
+#### Objets
+
+#### Héritage et polymorphisme
+
+#### Structures de données utiles
+
+#### Formats de fichier utiles
