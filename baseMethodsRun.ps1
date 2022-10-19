@@ -1,9 +1,9 @@
 # Commandes Java pour compiler et lancer base.Methods.
 #
-# USAGE : simplement taper `.\runBaseMethods.ps1` dans Powershell
+# USAGE : simplement taper `.\baseMethodsRun.ps1` dans Powershell
 # à partir de ce dossier
 # 
-#     Sur Bash ou Zsh, taper `chmod +x ./runBaseMethods.ps1` avant 
+#     Sur Bash ou Zsh, taper `chmod +x ./baseMethodsRun.ps1` avant 
 #     la première utilisation pour rendre le script exécutable.
 #
 

@@ -1,9 +1,9 @@
 # Commandes Java pour compiler et lancer base.Recursion.
 #
-# USAGE : simplement taper `.\runBaseRecursion.ps1` dans Powershell
+# USAGE : simplement taper `.\baseRecursionRun.ps1` dans Powershell
 # à partir de ce dossier
 # 
-#     Sur Bash ou Zsh, taper `chmod +x ./runBaseRecursion.ps1` avant 
+#     Sur Bash ou Zsh, taper `chmod +x ./baseRecursionRun.ps1` avant 
 #     la première utilisation pour rendre le script exécutable.
 #
 
