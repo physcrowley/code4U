@@ -1,4 +1,4 @@
-package base;
+package prep;
 
 /**
  * Exemple d'une classe qui ne contient que des champs de données. 
