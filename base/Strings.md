@@ -60,7 +60,7 @@ System.out.printf( " %b            %b\n", s1 == s2, s1.equals(s2) );
 
 
 // str.strip()
-"   Maria ".strip(); // "Maria"
+"   Momma mia    ".strip(); // "Momma mia"
 
 
 // str.replace(old, new)
