@@ -12,7 +12,34 @@ import java.util.Scanner;
  */
 public class Methods {
 
+    /** 
+     * Objet de type Scanner accessible par toutes les méthodes de la classe
+     * comme {@code base.Methods.getName()}
+     */
     private static Scanner input = new Scanner( System.console().reader() );
+
+    public static void main(String[] args) {
+
+        /*
+         * Ici, les appels de fonctions assignent les valeurs de retour à des
+         * variables et fournissent des valeurs à assigner aux paramètres.
+         */
+        System.out.print( "accueil... " );
+        greet();
+        
+        System.out.print( "obtenir le nom... " );
+        String name = getName();
+        
+        System.out.print( "déterminer le prix... ");
+        int points = prize( name );
+        
+        System.out.print( "produire le prix... " );
+        String prize = makePrize( name, points );
+        
+        System.out.println( "afficher le prix... " );
+        System.out.println( prize );
+
+    }
 
     /** Méthode sans paramètre ni valeur de retour */
     public static void greet(){
