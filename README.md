@@ -33,9 +33,6 @@ Tous les fichiers .md s'ouvriront maintenant en mode Preview directement.
 
 </details>
 
-
-
-
 ## Structure
 
 <details>
