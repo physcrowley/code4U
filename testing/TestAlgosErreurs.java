@@ -8,9 +8,6 @@ import java.util.Scanner;
  * @author physcrowley (2022-10)
  */
 public class TestAlgosErreurs {
-    
-    /** Scanner accessible à toutes les méthodes de la classe */
-    private static Scanner input = new Scanner( System.console().reader() );
 
     /**
      * Teste les méthodes de la classe AlgosErreurs individuellement
@@ -32,6 +29,7 @@ public class TestAlgosErreurs {
 
     static void testExecution()
     {
+        Scanner input = new Scanner( System.console().reader() );
         AlgosErreurs.execution( input );
     }
 
