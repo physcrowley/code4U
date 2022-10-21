@@ -1,6 +1,10 @@
 # Exemples de code pour le cours ICS4U
 > version 2022-10
 
+Les exemples sont préparés pour téléchargement et consultation par les élèves du cours ICS4U de M. Crowley. 
+
+Ces exemples sont complémentaires aux leçons présentées en classe et sont souvent la base des exercices.
+
 ## Utilisation
 
 <details>
@@ -18,15 +22,14 @@ Tous les fichiers .md s'ouvriront maintenant en mode Preview directement.
 </details>
 <p></p>
 <details>
-    <summary><i>Cliquer pour voir les détails</i></summary>
+    <summary><i>Cloner et synchroniser le dossier sur votre machine</i></summary>
 
-Les exemples sont préparés pour téléchargement par les élèves du cours ICS4U de M. Crowley. 
-
-Ces exemples sont complémentaires aux leçons présentées en classe et sont souvent la base des exercices.
 
 * Cloner le répertoire sur votre ordinateur
 * Si l'enseignant ajoute des nouveaux fichiers, simplement faire un Pull (cliquer sur le bouton synchroniser dans VS Code)
-* Vous ne pouvez pas pousser vos changements dans ce dossier. Le partage se fait à sens unique.
+* Copier tout exemple (fichier ou package) que vous voulez utiliser comme gabarit dans votre propre dossier de projet
+    * vous n'êtes pas autorisé à apporter des modifications à ce répertoire
+    * si vous en faites, vous aurez des messages d'erreur quand vous tenter de synchroniser ce dossier à nouveau
 
 </details>
 
