@@ -4,6 +4,20 @@
 ## Utilisation
 
 <details>
+    <summary><i>Afficher ce fichier (et tous les autres .md) en mode Preview par défaut</i></summary>
+
+Pour afficher les fichiers Markdown (.md) en mode Preview, simplement :
+* faire un clic-droit sur un fichier .md dans l'Explorateur de VS Code (p. ex. README.md)
+* choisir "Ouvrir avec..." > "Configurer l'éditeur par défaut pour "*.md""
+* cliquer sur "Markdown Preview"
+
+Tous les fichiers .md s'ouvriront maintenant en mode Preview directement.
+
+>Si vous voulez modifier le fichier, vous pouvez simplement cliquer sur "Ouvrir avec..." > "Éditeur de texte"
+
+</details>
+<p></p>
+<details>
     <summary><i>Cliquer pour voir les détails</i></summary>
 
 Les exemples sont préparés pour téléchargement par les élèves du cours ICS4U de M. Crowley. 
