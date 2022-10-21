@@ -17,8 +17,16 @@ public class TestAlgosErreurs {
      * @param args
      */
     public static void main(String[] args) {
-        // testExecution();
-        testLogic();
+        /*
+         * pas besoin de tester AlgosErreurs.syntaxe() parce l'erreur doit être
+         * résolue avant de pouvoir compiler AlgosErreurs.
+         */
+        
+        // méthode pour tester AlgosErreurs.execution( Scanner )
+        testExecution();
+
+        // méthode pour tester AlgosErreurs.logic( int )
+        // testLogic();
     }
 
 
@@ -27,6 +35,7 @@ public class TestAlgosErreurs {
         AlgosErreurs.execution( input );
     }
 
+    
     static void testLogic()
     {
         // cas à tester et résultats attendus pour chaque cas
