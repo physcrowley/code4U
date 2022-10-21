@@ -35,12 +35,12 @@ public class TestAlgosErreurs {
         AlgosErreurs.execution( input );
     }
 
-    
+
     static void testLogic()
     {
         // cas à tester et résultats attendus pour chaque cas
-        int[] cases    = { -1, 0, 1, 2, 3,  4,   5 };
-        int[] expected = { -1, 0, 1, 2, 6, 24, 120 };
+        int[] cases    = { -3, -2, -1, 0, 1, 2, 3,  4,   5 };
+        int[] expected = { -6,  2, -1, 0, 1, 2, 6, 24, 120 };
 
         // boucle de test
         int errors = 0;
