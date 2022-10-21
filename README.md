@@ -17,7 +17,7 @@ Pour afficher les fichiers Markdown (.md) en mode Preview, simplement :
 
 Tous les fichiers .md s'ouvriront maintenant en mode Preview directement.
 
->Si vous voulez modifier le fichier, vous pouvez simplement cliquer sur "Ouvrir avec..." > "Éditeur de texte"
+>Par la suite, si vous voulez modifier un ficher .md, vous pouvez simplement cliquer sur "Ouvrir avec..." > "Éditeur de texte"
 
 </details>
 <p></p>
