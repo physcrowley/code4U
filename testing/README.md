@@ -2,6 +2,12 @@
 
 Ce package inclut des exemples de programmes et de classes pour les tester avec différents algorithmes.
 
+## Instructions
+
+Copier ce package dans votre propre dossier de pratique afin de résoudre les erreurs par les différents moyens proposés.
+
+## Organisation générale
+
 L'organisation générale est :
 
 1. Classe qui contient des méthodes implémentant différents algorithmes. En programmation orientée-objet, ces classes seront les objets.
