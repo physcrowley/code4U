@@ -14,7 +14,7 @@ public class AlgosErreurs
      */
     public static void syntaxe()
     {
-        System.out.println( "Woohoo, je programme comme un Pro!" )
+        System.out.println( "Woohoo, je programme comme un Pro!" );
     }
 
     /** 
@@ -25,9 +25,69 @@ public class AlgosErreurs
      */
     public static void execution( Scanner console )
     {
-        System.out.print( "Je te demande un nombre (mais écrit du texte) > " );
-        int choix = console.nextInt();
-        System.out.println( "Tu as fourni le nombre " + choix );
+        System.out.println( "TEST 1 - simple erreur" );
+        try
+        {
+            System.out.print( "Je te demande un nombre entier (mais écrit du texte) > " );
+            int choix = console.nextInt();
+            System.out.println( "Tu as fourni le nombre " + choix );
+            System.out.println( "\nOn essaye un autre cas test.\n" );
+        } catch (Exception e)
+        {
+            errorOutput( e );
+            System.out.println( "\tEntrer un nombre entier la prochaine fois.\n");
+        }
+
+
+        System.out.println( "TEST 2 - format des nombres à la console" );
+        try
+        {
+            TestLocale.console();
+            System.out.println( "\nOn essaye un autre cas test.\n" );
+        } catch (Exception e)
+        {
+            errorOutput( e );
+            System.out.println( "\tAller dans le fichier TestLocale.java pour"
+            + " décommenter la ligne de code qui spécifie le Locale pour l'objet"
+            + " Scanner et essayez encore.\n" );
+
+        }
+
+
+        System.out.println( "TEST 3 - format des nombres dans un fichier" );
+        try
+        {
+            TestLocale.file();
+        } catch (Exception e)
+        {
+            errorOutput( e );
+            System.out.println( "\tAller dans le fichier TestLocale.java pour"
+            + " décommenter la ligne de code qui spécifie le Locale pour le fichier"
+            + " et essayez encore.\n" );
+        }
+
+    }
+
+    /** 
+     * Petite méthode d'appui à la méthode {@code execution} pour mieux afficher les
+     * messages d'erreur
+     */
+    private static void errorOutput( Exception e )
+    {
+        // codes ANSI pour changer la couleur du texte à la console
+        final String RESET = "\033[0m", RED = "\033[0;31m", GREEN = "\033[0;32m";
+
+        // message d'erreur personnel
+        System.err.println( GREEN );
+        System.err.println( "BOOM!!! Le programme aurait planté, mais il y avait"
+        + " du code try/catch pour intervenir. Voici le message sur l'Exception :" );
+        
+        // message d'erreur du JVM
+        System.err.println( RED );
+        e.printStackTrace();
+
+        // retour à la couleur par défaut
+        System.err.println( RESET );
     }
 
     /** 
