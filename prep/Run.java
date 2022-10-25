@@ -15,7 +15,6 @@ public class Run {
     }
 
     
-
     /** Utilise le struct/record défini dans {@link base.Struct} */
     static void struct()
     {
