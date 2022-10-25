@@ -1,0 +1,27 @@
+@startuml prep
+
+!theme mars
+
+package prep {
+
+    class Run {
+        + main( String[] ) : void {static}
+    }
+
+    class Struct {
+        + String name 
+        + int schoolYear
+        + double average
+    }
+
+    class Module {
+        + showList( int, Struct[] ) : void {static}
+        + showAverage( int, Struct[] ) : void {static}
+    }
+
+    Run -- Struct
+    Run -- Module
+    Module -- Struct
+}
+
+@enduml
