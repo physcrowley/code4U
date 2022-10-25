@@ -6,6 +6,7 @@ package prep;
  * un "struct".
  */
 public class Struct {
+
     /** Le nom de l'élève */
     public String name;
 
@@ -14,4 +15,16 @@ public class Struct {
 
     /** La moyenne académique */
     public double average;
+
+     /*
+     * Mot-clé PUBLIC
+     * 
+     * Afin que les variables name, schoolYear et average soient accessibles
+     * à des classes externes à Struct, il faut les déclarer `public`.
+     * 
+     * Voilà, c'est tout!
+     * 
+     * C'est la même chose pour les méthodes `public`.
+     */
+
 }
