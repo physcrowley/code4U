@@ -28,10 +28,10 @@ class TestLocale
 
     public static void file()
     {
-        Scanner file;
+        // le try/catch nous permet de gérer l'erreur si le fichier n'est pas trouvé
         try 
-        { // le try nous permet de gérer l'erreur si le fichier n'est pas trouvé
-            file = new Scanner( new File( "./data/locale.txt" ) );
+        { 
+            Scanner file = new Scanner( new File( "./data/locale.txt" ) );
             // file.useLocale(Locale.CANADA);
             d = file.nextDouble();
             System.out.println( "Du fichier : " + d );
