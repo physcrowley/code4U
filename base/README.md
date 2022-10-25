@@ -2,8 +2,9 @@
 
 Ce package présente des exemples en lien avec la revue des bases du Java.
 
-Il y a deux classes :
+Il y a ces classes :
 
+* Equals.java
 * Methods.java
 * Recursion.java
 
