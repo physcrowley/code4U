@@ -7,7 +7,7 @@ Il y a deux classes :
 * Methods.java
 * Recursion.java
 
-que vous devez lancer avec les commandes dans les scripts à la racine du dossier (`runBaseMethods.ps1` et `runBaseRecursion.ps1`) suivant les instructions dans les commentaires du script. Vous pouvez aussi lances les commandes `javac` et `java` dans les scripts individuellement et manuellement à la console.
+que vous devez lancer avec les commandes dans les scripts à la racine du dossier (`runBaseMethods.ps1` et `runBaseRecursion.ps1`) suivant les instructions dans les commentaires du script. Vous pouvez aussi lancer les commandes `javac` et `java` spécifiques présentées dans les scripts une-par-une (manuellement) à la console.
 
 Il y a aussi deux fichier Markdown :
 
