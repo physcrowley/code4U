@@ -39,7 +39,7 @@ class TestLocale
         } // end of try
         catch (IOException e)
         {
-            System.out.println( "Erreur d'ouverture du fichier" );
+            System.err.println( "Erreur d'ouverture du fichier" );
         } // end of catch
     } // end of main
 } // end of TestLocale
