@@ -14,8 +14,9 @@ public class AlgosErreurs
      */
     public static void syntaxe()
     {
-        System.out.println( "Woohoo, je programme comme un Pro!" );
+        System.out.println( "Woohoo, je programme comme un Pro!" )
     }
+
 
     /** 
      * Cette méthode peut donner une erreur d'exécution. Le programme
@@ -25,7 +26,7 @@ public class AlgosErreurs
      */
     public static void execution( Scanner console )
     {
-        System.out.println( "TEST 1 - simple erreur" );
+        System.out.println( "TEST 1 - simple erreur d'entrée" );
         try
         {
             System.out.print( "Je te demande un nombre entier (mais écrit du texte) > " );
@@ -35,7 +36,7 @@ public class AlgosErreurs
         } catch (Exception e)
         {
             errorOutput( e );
-            System.out.println( "\tEntrer un nombre entier la prochaine fois.\n");
+            System.err.println( "\tEntrer un nombre entier la prochaine fois.\n");
         }
 
 
@@ -47,7 +48,7 @@ public class AlgosErreurs
         } catch (Exception e)
         {
             errorOutput( e );
-            System.out.println( "\tAller dans le fichier TestLocale.java pour"
+            System.err.println( "\tAller dans le fichier TestLocale.java pour"
             + " décommenter la ligne de code qui spécifie le Locale pour l'objet"
             + " Scanner et essayez encore.\n" );
 
@@ -61,12 +62,13 @@ public class AlgosErreurs
         } catch (Exception e)
         {
             errorOutput( e );
-            System.out.println( "\tAller dans le fichier TestLocale.java pour"
+            System.err.println( "\tAller dans le fichier TestLocale.java pour"
             + " décommenter la ligne de code qui spécifie le Locale pour le fichier"
             + " et essayez encore.\n" );
         }
 
     }
+
 
     /** 
      * Petite méthode d'appui à la méthode {@code execution} pour mieux afficher les
@@ -89,6 +91,7 @@ public class AlgosErreurs
         // retour à la couleur par défaut
         System.err.println( RESET );
     }
+
 
     /** 
      * Cette méthode contient des erreurs de logique, le type d'erreur le
