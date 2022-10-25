@@ -51,11 +51,15 @@ public class TestAlgosErreurs {
         }
         if ( errors == 0 )
         {
-            System.out.println( "Succès" );
+            System.out.println( GREEN + "Succès" + RESET );
         } else
         {
-            System.out.println( errors + " erreurs / " + cases.length + " cas");
+            System.out.println( RED + errors + " erreurs" + RESET 
+                                + " / " + cases.length + " cas"  );
         }
     }
+
+    // codes ANSI pour changer la couleur du texte à la console
+    static final String RESET = "\033[0m", RED = "\033[0;31m", GREEN = "\033[0;32m";
     
 }
