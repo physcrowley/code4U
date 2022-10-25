@@ -4,6 +4,7 @@ Ce package présente des exemples en lien avec la revue des bases du Java.
 
 ## Classes
 
+* Commentaires.java (lire pour voir les exemples de commentaires!)
 * Equals.java
 * Methods.java
 * Recursion.java
