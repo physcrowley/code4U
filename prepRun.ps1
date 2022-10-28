@@ -11,7 +11,7 @@ javac ./prep/*.java
 java prep.Run
 
 # Note 1 : si tous les fichiers sont déjà compilés, c'est plus vite de simplement
-# lancer `java prep.RunPrep` au lieu de lancer ce script
+# lancer `java prep.Run` au lieu de lancer ce script
 
 # Note 2 : parce que la classe principale qu'on veut lancer se trouve dans un 
 # sous-package, il faut spécifier le nom "pleinement qualifié" ou le nom complet 

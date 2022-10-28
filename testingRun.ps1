@@ -3,7 +3,7 @@
 #
 # USAGE : simplement taper `.\testingRun.ps1` dans Powershell à partir de ce dossier
 # 
-#     Sur Bash ou Zsh, taper `chmod +x ./prepRun.ps1` avant la première utilisation 
+#     Sur Bash ou Zsh, taper `chmod +x ./testingRun.ps1` avant la première utilisation 
 #     pour rendre le script exécutable.
 #
 
