@@ -33,9 +33,7 @@ public class TestAlgosErreurs {
         // tester les méthodes qui visent des erreurs d'exécution
         System.out.println( FLUSH ); // vider la console
         testExecOops();
-        System.out.println( FLUSH );
         testExecConsole();
-        System.out.println( FLUSH );
         testExecFile();
 
         // tester la méthode qui vise les erreurs de logique
@@ -50,10 +48,9 @@ public class TestAlgosErreurs {
         System.out.println( " - erreurs humaines lors des interactions\n" );
 
         AlgosErreurs.execOopsNotInt( "r" ); // pas un entier
-        pause(); // voir la définition de méthode plus bas
-
+        pause();
         AlgosErreurs.execOopsNotInt( "3" ); // un entier
-        pause();           
+        warnAndFlush(); // voir la définition de méthode plus bas
     }
 
 
@@ -64,12 +61,10 @@ public class TestAlgosErreurs {
         System.out.println( " - paramètres de lieu affectant à la console\n" ); 
 
         AlgosErreurs.execDoublesAtConsole( "1,2" ); // format français
-        pause(); // voir la définition de méthode plus bas
-
-        AlgosErreurs.execDoublesAtConsole( "1.2" ); // format anglais
         pause();
+        AlgosErreurs.execDoublesAtConsole( "1.2" ); // format anglais
+        warnAndFlush();
     }
-
 
     /** Cette méthode passe des cas de test à la méthode {@code AlgosErreurs.execDoublesInFile()} */
     static void testExecFile()
@@ -78,18 +73,26 @@ public class TestAlgosErreurs {
         System.out.println( " - paramètres de lieu affectant la lecture d'un fichier\n" ); 
 
         AlgosErreurs.execDoublesInFile( "./data/locale_fr.txt" ); // format français
-        pause(); // voir la définition de méthode plus bas
-
-        AlgosErreurs.execDoublesInFile( "./data/locale_en.txt" ); // format anglais
         pause();
+        AlgosErreurs.execDoublesInFile( "./data/locale_en.txt" ); // format anglais
+        warnAndFlush();
     }
 
 
     /** Bloque le programme pour donner à l'utilisateur le temps de lire les messages */
     private static void pause() {
         System.out.print("Taper ENTRÉE pour continuer "); 
-        input.nextLine();
+        input.nextLine(); // attendre l'entrée
         System.out.println(); // ligne vide
+    }
+
+    /** Avertissement et effacage de la console */
+    private static void warnAndFlush()
+    {
+        System.out.print( "\n" + RED );
+        System.out.println( "Prendre une capture d'écran - la console sera effacée. " + RESET );
+        pause();
+        System.out.println( FLUSH );
     }
 
 
