@@ -19,7 +19,7 @@ public class AlgosErreurs
      */
     public static void syntaxe()
     {
-        System.out.println( "Woohoo, je programme comme un Pro!" );
+        System.out.println( "Woohoo, je programme comme un Pro!" )
     }
 
 
