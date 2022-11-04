@@ -77,10 +77,11 @@ public class AlgosErreurs
         catch (Exception e)
         {
             errorOutput( e );
-            System.err.println( "CORRECTION : Aller dans le fichier" + GREEN
-            + " AlgosErreurs.java" + RESET + " pour décommenter la ligne de code"
-            + " dans la méthode " + GREEN + "execDoublesAtConsole" + RESET + " qui"
-            + " spécifie le Locale pour le Scanner consoleSim et essayez encore.\n" );
+            System.err.println( "CORRECTION : Pour des programmes de console, c'est important"
+              + " de donner des invites de commande claires \n\tET de spécifier un paramètre de"
+              + " lieu (Locale) EXPLICITEMENT en vous assurant \n\tque le Locale et les invites"
+              + " soient cohérentes. Négliger un des deux peut donner \n\tdes comportements"
+              + " inattendus.\n" );
         }
         consoleSim.close();
     }
@@ -99,8 +100,8 @@ public class AlgosErreurs
             // afficher le contenu du fichier
             //
             Scanner fileRead = new Scanner( new File( path ) ); // plantera ici, potentiellement
-            System.out.print( "Le fichier " + path + " contient le texte : " );
-            System.out.println( fileRead.nextLine() );
+            System.out.print( "Le fichier " + GREEN + path + RESET + " contient le texte : " );
+            System.out.println( GREEN + fileRead.nextLine() + RESET );
             fileRead.close();
 
             //
@@ -115,10 +116,11 @@ public class AlgosErreurs
         catch (Exception e)
         {
             errorOutput( e );
-            System.err.println( "CORRECTION : Aller dans le fichier " + GREEN
-            + "AlgosErreurs.java" + RESET + " pour décommenter la ligne de code"
-            + " dans la méthode " + GREEN + "execDoublesInFile" + RESET + " qui" 
-            + " spécifie le Locale pour le Scanner fileGet et essayez encore.\n" );
+            System.err.println( "CORRECTION : En lisant des fichiers, c'est important"
+            + " de connaître le FORMAT des données \n\tdans le fichier ET de spécifier"
+            + " EXPLICITEMENT un paramètre de lieu (Locale) \n\tqui soit cohérent"
+            + " avec ce format. Négliger un des deux peut donner des \n\tcomportements"
+            + " inattendus.\n" );
         }
     }
 
