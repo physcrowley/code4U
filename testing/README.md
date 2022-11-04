@@ -6,13 +6,15 @@ Ce package inclut des exemples de programmes et de classes pour les tester avec 
 
 Copier ce package dans votre propre dossier de pratique afin de résoudre les erreurs par les différents moyens proposés.
 
-## Organisation générale
+## Organisation
 
-L'organisation générale est :
+1. La classe `AlgosErreurs` **implémente** les méthodes utilisant le modèle de "modules", soit de classes contenant des méthodes `static` utiles.
+    * Dans cet exemple, les méthodes sont expréssement conçues pour exposer les différents types d'erreurs
+    * En général, ce genre de classe sera la base de la logique du programme.
+2. La classe `TestAlgosErreurs` **teste** les méthodes d'`AlgoErreurs` individuellement pour vérifier qu'elles produisent des résultats valides.
+    * Dans cet exemple, seulement 1 des tests est actif dans le code de démarrage pour réduire la quantité d'information à traiter durant l'apprentissage.
+    * En général, 
+        * les classes tests incluent une méthode `main` et s'appellent souvent `Test*.java` où * est le nom de la classe à tester.
+        * lancent tous leurs tests en même temps
+        * utilisent une bibliothèque spécialisée (JUnit) qui offre des outils pour créer des tests plus rapidement et robustement.
 
-1. Classe qui contient des méthodes implémentant différents algorithmes. En programmation orientée-objet, ces classes seront les objets. 
-    * **Dans ces exemples** la classe `AlgosErreurs` et la classe `TestLocale` implémentent les méthodes principales à tester utilisant le modèle de "modules", soit de classes contenant des méthodes `static` utiles.
-2. Classe qui rassemblent les algorithmes et l'interface utilisateur du programme. Cette classe inclut une méthode `main` et s'appelle souvent `*Driver.java` ou `*App.java`.
-    * **Dans ces exemples** axés sur les tests, il n'y a pas de classe de cette catégorie
-3. Classe qui test les méthodes individuellement pour vérifier qu'elles produisent des résultats valides. Ces classes incluent aussi une méthode `main` et s'appellent souvent `Test*.java`.
-    * **Dans ces exemples** il y a la classe `TestAlgosErreurs`.
