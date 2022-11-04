@@ -1,6 +1,7 @@
 package testing;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Locale; // sera utilisé après l'application de quelques corrections
 import java.util.Scanner;
 
@@ -113,14 +114,18 @@ public class AlgosErreurs
             System.out.println( "Bravo! J'ai bien lu " + d );
             fileGet.close();
         } 
-        catch (Exception e)
+        catch ( FileNotFoundException fnf ) // planté en ouvrant le fichier
+        {
+            System.err.println( RED + "Il manque le fichier " + path  + RESET );
+        }
+        catch (Exception e) // planté en convertissant le double
         {
             errorOutput( e );
             System.err.println( "CORRECTION : En lisant des fichiers, c'est important"
-            + " de connaître le FORMAT des données \n\tdans le fichier ET de spécifier"
-            + " EXPLICITEMENT un paramètre de lieu (Locale) \n\tqui soit cohérent"
-            + " avec ce format. Négliger un des deux peut donner des \n\tcomportements"
-            + " inattendus.\n" );
+                + " de connaître le FORMAT des données \n\tdans le fichier ET de spécifier"
+                + " EXPLICITEMENT un paramètre de lieu (Locale) \n\tqui soit cohérent"
+                + " avec ce format. Négliger un des deux peut donner des \n\tcomportements"
+                + " inattendus.\n" );
         }
     }
 
