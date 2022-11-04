@@ -1,6 +1,7 @@
 package testing;
 
 import java.io.File;
+import java.util.Locale; // sera utilisé après l'application de quelques corrections
 import java.util.Scanner;
 
 /** Classe qui présente des méthodes avec les 3 différents types
@@ -9,6 +10,9 @@ import java.util.Scanner;
  */
 public class AlgosErreurs 
 {
+    /** codes ANSI pour changer la couleur du texte à la console */
+    final static String RESET = "\033[0m", RED = "\033[0;31m", GREEN = "\033[0;32m";
+    
     /** Cette méthode contient une erreur de syntaxe. Le projet ne se
      * compile pas sans régler ça. <p> Le compilateur nous donne de
      * l'information à la console sur l'erreur.
@@ -19,99 +23,113 @@ public class AlgosErreurs
     }
 
 
-    /** 
-     * Cette méthode tente de produire trois différentes erreurs d'exécution. 
-     * Le programme se compile mais peut planter durant l'exécution.<p> 
-     * Le JVM nous donne de l'information sur l'"Exception" - le terme 
-     * officiel pour un plantage - à la console.
+    /**
+     * Cette méthode tente de produire une exception liée à une erreur d'entrée de 
+     * données (p. ex. mauvaise touche) durant une interaction via la console. 
+     * Elle tente de saisir un {@code int}.
+     * @param input l'entrée pour la console simulée
      */
-    public static void execution( Scanner console )
+    public static void execOopsNotInt( String input )
     {
-        /*
-         * Premier scénario
-         */
-        System.out.println( "SCÉNARIO 1 - entrée de données incorrectes via la console" );
+        // ce Scanner prendra directement les valeurs passées en argument au lieu
+        // des valeurs passées via interaction à la console
+        Scanner consoleSim = new Scanner( input );
         
         // le bloc TRY peut contenir du code qui génère ("throws") une exception. Si c'est
         // le cas, au lieu de planter, le programme continue dans le bloc CATCH où le 
         // développeur peut faire quelque chose d'utile avec l'erreur.
         try
         {
-            System.out.print( "Je vous demande un nombre entier (mais écrivez du texte) > " );
-            int choix = console.nextInt(); // plantera ici, potentiellement         
-            System.out.println( "Vous avez fourni le nombre " + choix );
-        } catch (Exception e)
+            System.out.print( "Entrer un nombre entier > " );
+            System.out.println( GREEN + input ); // la valeur passée en argument
+            int choix = consoleSim.nextInt(); // plantera ici, potentiellement         
+            System.out.println( RESET + "Bravo! J'ai bien lu " + choix );
+        } 
+        catch (Exception e)
         {
             errorOutput( e ); // affiche les messages d'erreur (voir la définition de méthode plus bas)
             System.err.println( "CORRECTION : Entrer un nombre entier la prochaine fois.\n");
         }
-        console.nextLine(); // vider le retour de ligne suite au nextInt()
-        wait( console ); // voir la définition de méthode plus bas
-
-        /*
-         * Deuxième scénario
-         */
-        System.out.println( "SCÉNARIO 2 - paramètres de lieu affectant à la console" );
-        try
-        {
-            // console.useLocale( Locale.CANADA );
-            System.out.println( "Entrer une valeur décimale (avec .) > " );
-            double d = console.nextDouble(); // plantera ici, potentiellement
-            System.out.println( "Nombre de la console : " + d );
-        } catch (Exception e)
-        {
-            errorOutput( e );
-            System.err.println( "CORRECTION : Aller dans le fichier AlgosErreurs.java pour"
-            + " décommenter la ligne de code dans la méthode exécution qui spécifie le"
-            + " Locale pour le Scanner de la console (scénario 2) et essayez encore.\n" );
-
-        }
-        console.nextLine(); // vider le retour de ligne suite au nextDouble()
-        wait( console );
-
-        /*
-         * Troisième test
-         */
-        System.out.println( "SCÉNARIO 3 - paramètres de lieu affectant la lecture d'un fichier" );
-        try
-        {
-            String path = "./data/locale.txt";
-            System.out.print( "\nTentative de lire la valeur à virgule flottant du fichier " + path );
-            System.out.println(" ... ");
-
-            Scanner file = new Scanner( new File( path ) );
-            // file.useLocale(Locale.CANADA);
-            double d = file.nextDouble(); // plantera ici, potentiellement
-            System.out.println( "Du fichier : " + d );
-            file.close();
-        } catch (Exception e)
-        {
-            errorOutput( e );
-            System.err.println( "CORRECTION : Aller dans le fichier AlgosErreurs.java pour"
-            + " décommenter la ligne de code dans la méthode exécution qui spécifie le" 
-            + " Locale pour le Scanner du fichier (scénario 3) et essayez encore.\n" );
-        }
+        consoleSim.close();
     }
 
 
-    /** Bloque le programme pour donner à l'utilisateur le temps de lire les messages */
-    private static void wait( Scanner console ) {
-        System.out.print("Taper ENTRÉE pour continuer "); 
-        console.nextLine();
-        System.out.println(); // ligne vide
+    /**
+     * Cette méthode tente de produire des exceptions liées à des formats de nombres
+     * incompatibles entre le Scanner (qui utilise par défaut les paramètres de lieu   
+     * du système) et les entrées via la console.
+     * @param input l'entrée pour la console simulée
+     */
+    public static void execDoublesAtConsole( String input )
+    {
+        // ce Scanner prendra directement les valeurs passées en argument au lieu
+        // des valeurs passées via interaction à la console
+        Scanner consoleSim = new Scanner( input );
+        
+        try
+        {
+            // consoleSim.useLocale( Locale.CANADA ); // formats anglais
+            System.out.print( "Entrer une valeur décimale (avec .) > " );
+            System.out.println( GREEN + input ); // la valeur passée en argument
+            double d = consoleSim.nextDouble(); // plantera ici, potentiellement
+            System.out.println( RESET + "Bravo! J'ai bien lu " + d );
+        } 
+        catch (Exception e)
+        {
+            errorOutput( e );
+            System.err.println( "CORRECTION : Aller dans le fichier" + GREEN
+            + " AlgosErreurs.java" + RESET + " pour décommenter la ligne de code"
+            + " dans la méthode " + GREEN + "execDoublesAtConsole" + RESET + " qui"
+            + " spécifie le Locale pour le Scanner consoleSim et essayez encore.\n" );
+        }
+        consoleSim.close();
+    }
+    
+    /**
+     * Cette méthode tente de produire des exceptions liées à des formats de nombres
+     * incompatibles entre le Scanner (qui utilise par défaut les paramètres de lieu   
+     * du système) et les entrées dans un fichier.
+     * @param path le chemin vers le fichier à lire
+     */
+    public static void execDoublesInFile( String path )
+    {
+        try
+        {
+            //
+            // afficher le contenu du fichier
+            //
+            Scanner fileRead = new Scanner( new File( path ) ); // plantera ici, potentiellement
+            System.out.print( "Le fichier " + path + " contient le texte : " );
+            System.out.println( fileRead.nextLine() );
+            fileRead.close();
+
+            //
+            // extraire la valeur double
+            //
+            Scanner fileGet = new Scanner( new File( path ) ); // plantera ici, potentiellement
+            // fileGet.useLocale(Locale.CANADA); // formats anglais
+            double d = fileGet.nextDouble(); // plantera ici, potentiellement
+            System.out.println( "Bravo! J'ai bien lu " + d );
+            fileGet.close();
+        } 
+        catch (Exception e)
+        {
+            errorOutput( e );
+            System.err.println( "CORRECTION : Aller dans le fichier " + GREEN
+            + "AlgosErreurs.java" + RESET + " pour décommenter la ligne de code"
+            + " dans la méthode " + GREEN + "execDoublesInFile" + RESET + " qui" 
+            + " spécifie le Locale pour le Scanner fileGet et essayez encore.\n" );
+        }
     }
 
     /** Affichage personnalisé des messages d'erreur */
     private static void errorOutput( Exception e )
     {
-        // codes ANSI pour changer la couleur du texte à la console
-        final String RESET = "\033[0m", RED = "\033[0;31m", GREEN = "\033[0;32m";
-
         // message d'erreur personnel
         System.err.println( GREEN );
         System.err.println( "KABOOM!!! Le programme a planté, a \"lancé une exception\","
-        + " mais à l'intérieur du bloc try, donc le programme continue dans le bloc"
-        + " catch. \nPour votre étude, voici les informations sur l'exception :" );
+        + " mais à l'intérieur du bloc TRY, donc le programme continue dans le bloc"
+        + " CATCH. \nPour votre étude, voici les informations sur l'exception :" );
         
         // message d'erreur du JVM (infos sur l'exception)
         System.err.println( RED );

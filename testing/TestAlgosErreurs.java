@@ -9,28 +9,87 @@ import java.util.Scanner;
  */
 public class TestAlgosErreurs {
 
+    /** Pour l'interaction avec l'utilisateur durant les tests */
+    private static Scanner input = new Scanner( System.console().reader() );
+
+    /** codes ANSI pour changer la couleur du texte à la console */
+    static final String RESET = "\033[0m", RED = "\033[0;31m", GREEN = "\033[0;32m";
+
+    /** code ANSI pour vider la console */
+    static final String FLUSH = "\033[H\033[2J";
+    
     /**
-     * Teste les méthodes de la classe AlgosErreurs individuellement
+     * Teste les méthodes de la classe {@link AlgosErreurs} individuellement
      * @param args
      */
     public static void main(String[] args) {
         /*
-         * pas besoin de tester AlgosErreurs.syntaxe() parce l'erreur doit être
-         * résolue avant de pouvoir compiler AlgosErreurs.
+         * pas besoin de tester la méthode qui vise les erreurs de
+         * syntaxe parce qu'il faut résoudre ces erreurs avant de
+         * pouvoir lancer les tests. Voir AlgosErreurs.syntaxe()
+         * directement.
          */
         
-        // méthode pour tester AlgosErreurs.execution( Scanner )
-        testExecution();
+        // tester les méthodes qui visent des erreurs d'exécution
+        System.out.println( FLUSH ); // vider la console
+        testExecOops();
+        System.out.println( FLUSH );
+        testExecConsole();
+        System.out.println( FLUSH );
+        testExecFile();
 
-        // méthode pour tester AlgosErreurs.logic( int )
+        // tester la méthode qui vise les erreurs de logique
         // testLogic();
     }
 
 
-    static void testExecution()
+    /** Cette méthode passe des cas de test à la méthode {@code AlgosErreurs.execOopsNotInt()} */
+    static void testExecOops()
     {
-        Scanner input = new Scanner( System.console().reader() );
-        AlgosErreurs.execution( input );
+        System.out.print( "TEST de execOopsNotInt" );
+        System.out.println( " - erreurs humaines lors des interactions\n" );
+
+        AlgosErreurs.execOopsNotInt( "r" ); // pas un entier
+        pause(); // voir la définition de méthode plus bas
+
+        AlgosErreurs.execOopsNotInt( "3" ); // un entier
+        pause();           
+    }
+
+
+    /** Cette méthode passe des cas de test à la méthode {@code AlgosErreurs.execDoublesAtConsole()} */
+    static void testExecConsole()
+    {
+        System.out.print( "TEST de execDoublesAtConsole" );
+        System.out.println( " - paramètres de lieu affectant à la console\n" ); 
+
+        AlgosErreurs.execDoublesAtConsole( "1,2" ); // format français
+        pause(); // voir la définition de méthode plus bas
+
+        AlgosErreurs.execDoublesAtConsole( "1.2" ); // format anglais
+        pause();
+    }
+
+
+    /** Cette méthode passe des cas de test à la méthode {@code AlgosErreurs.execDoublesInFile()} */
+    static void testExecFile()
+    {
+        System.out.print( "TEST de execDoublesInFile" );
+        System.out.println( " - paramètres de lieu affectant la lecture d'un fichier\n" ); 
+
+        AlgosErreurs.execDoublesInFile( "./data/locale_fr.txt" ); // format français
+        pause(); // voir la définition de méthode plus bas
+
+        AlgosErreurs.execDoublesInFile( "./data/locale_en.txt" ); // format anglais
+        pause();
+    }
+
+
+    /** Bloque le programme pour donner à l'utilisateur le temps de lire les messages */
+    private static void pause() {
+        System.out.print("Taper ENTRÉE pour continuer "); 
+        input.nextLine();
+        System.out.println(); // ligne vide
     }
 
 
@@ -57,9 +116,5 @@ public class TestAlgosErreurs {
             System.out.println( RED + errors + " erreurs" + RESET 
                                 + " / " + cases.length + " cas"  );
         }
-    }
-
-    // codes ANSI pour changer la couleur du texte à la console
-    static final String RESET = "\033[0m", RED = "\033[0;31m", GREEN = "\033[0;32m";
-    
+    }    
 }
