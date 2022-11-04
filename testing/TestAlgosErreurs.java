@@ -23,6 +23,9 @@ public class TestAlgosErreurs {
      * @param args
      */
     public static void main(String[] args) {
+        
+        System.out.println( FLUSH ); // vider la console
+
         /*
          * pas besoin de tester la méthode qui vise les erreurs de
          * syntaxe parce qu'il faut résoudre ces erreurs avant de
@@ -31,7 +34,6 @@ public class TestAlgosErreurs {
          */
         
         // tester les méthodes qui visent des erreurs d'exécution
-        System.out.println( FLUSH ); // vider la console
         testExecOops();
         testExecConsole();
         testExecFile();
@@ -99,8 +101,10 @@ public class TestAlgosErreurs {
     static void testLogic()
     {
         // cas à tester et résultats attendus pour chaque cas
-        int[] cases    = { -3, -2, -1, 0, 1, 2, 3,  4,   5 };
-        int[] expected = { -6,  2, -1, 0, 1, 2, 6, 24, 120 };
+        //     la fonction factoriel est définie pour les entiers plus grands ou
+        //     égale à 0
+        int[] cases    = { 0, 1, 2, 3,  4,   5 };
+        int[] expected = { 1, 1, 2, 6, 24, 120 };
 
         // boucle de test
         int errors = 0;
