@@ -11,7 +11,7 @@ public class Student {
 
     String name;
     int id;
-    Map<String, Double> courses;
+    Map<String, Double> courses; // clé : nom du cours, valeur : moyenne
     double average;
 
     //
