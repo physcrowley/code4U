@@ -18,11 +18,9 @@ public class SchoolApp {
 
     public static void main(String[] args) {
 
-        
         //
         // Acceuil
         //
-
         System.out.print( FLUSH );
         System.out.println( "=== Bienvenue à l'école! ===\n" );
 
@@ -37,17 +35,13 @@ public class SchoolApp {
         //
         // Inscription
         //
-
         System.out.println( FLUSH + "=== Menu d'inscription ===\n" );
+       
         System.out.print( "Quel est votre nom? > " );
-        player = register( console.nextLine() );
+        player = register( console.nextLine() ); // initialiser l'objet Student
         System.out.println();
 
-        boolean chooseCourses = true;
-        while ( chooseCourses )
-        {
-            chooseCourses = joinClass();
-        }
+        while ( joinClass() ) {} // tout se passe dans la méthode joinClass() : boolean
         if ( player.courses.size() == 0 ) // n'ont pas choisi de cours
         {
             System.out.println( "Au revoir!");
@@ -57,21 +51,13 @@ public class SchoolApp {
         //
         // Obtenir des notes
         //
-
         System.out.println( FLUSH + "=== Menu académique ===\n" );
-
-        boolean newTest = true;
-        while ( newTest )
-        {
-            newTest = takeTest();
-        }
+        while ( takeTest() ) {} // tout se passe dans la méthode takeTest() : boolean
 
         //
         // Fin du programme
         //
-
         System.out.println( FLUSH + "Au revoir, " + player.name + "!\n" );
-
         System.out.println( "Voici votre relevé de notes :" );
         printTranscript();
     }
@@ -95,7 +81,7 @@ public class SchoolApp {
         {
             if ( choix.equalsIgnoreCase( c ) ) 
             {
-                player.addCourse( c );
+                player.addCourse( c ); // ajouter un cours
                 return true;
             }
         }
@@ -121,7 +107,7 @@ public class SchoolApp {
         {
             if ( choix.equalsIgnoreCase( course ) )
             {
-                player.updateCourseGrade( course, grade );
+                player.updateCourseGrade( course, grade ); // mettre à jour la note
         
                 System.out.print("    ");
                 if ( grade >= 80 )
