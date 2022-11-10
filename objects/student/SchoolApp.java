@@ -41,6 +41,7 @@ public class SchoolApp {
         player = register( console.nextLine() ); // initialiser l'objet Student
         System.out.println();
 
+
         while ( joinClass() ) {} // tout se passe dans la méthode joinClass() : boolean
         if ( player.courses.size() == 0 ) // n'ont pas choisi de cours
         {
@@ -84,8 +85,9 @@ public class SchoolApp {
                 player.addCourse( c ); // ajouter un cours
                 return true;
             }
+            System.out.println( "    Ce n'était pas un choix valide." );
         }
-        System.out.println( "    Ce n'était pas un choix valide." );
+        
         return true;
     }
     
