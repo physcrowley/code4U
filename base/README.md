@@ -9,7 +9,7 @@ Ce package présente des exemples en lien avec la revue des bases du Java.
 * Methods.java
 * Recursion.java
 
-que vous devez lancer avec le script à la racine du dossier (`runBase.ps1`) suivant les instructions dans les commentaires du script, p. ex. : `./runBase.ps1 Equals` ou `./runBase.ps1 Methods`. 
+que vous devez lancer avec le script à la racine du dossier (`baseRun.ps1`) suivant les instructions dans les commentaires du script, p. ex. : `./baseRun.ps1 Equals` ou `./baseRun.ps1 Methods`. 
 
 Vous pouvez aussi lancer les commandes `javac` et `java` spécifiques présentées dans le script une-par-une (manuellement) à la console si vous préférez, p. ex.: `javac ./base/Equals.java` suivi par `java base.Equals`.
 
