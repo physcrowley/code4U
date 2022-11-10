@@ -22,7 +22,7 @@ public class Run {
         // fichier sans faire planter le programme
         try { 
             fileReader = new Scanner( new File( file ) );
-	    fileReader.useLocale( java.util.Locale.CANADA_FRENCH );
+	        fileReader.useLocale( java.util.Locale.CANADA_FRENCH ); // moyennes au format ##,#
         } catch ( Exception e ) {
             System.err.println( "Erreur : fichier \"" + file + "\" pas trouvé" );
             return; // quitter en cas d'échec
