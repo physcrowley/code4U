@@ -65,14 +65,14 @@ public class TestStudent {
 
     static boolean testAddCourse()
     {
-        String[] courses = { "Math", "Français", "Informatique", "Arts" };
+        String[] testCourses = { "Math", "Français", "Informatique", "Arts" };
         
         System.out.println( "\nTest d'ajout de cours...");
 
         // ajouter tous les cours à chaque élève
         for ( Student s : students )
         {
-            for ( String c : courses )
+            for ( String c : testCourses )
             {
                 s.addCourse( c );
             }
@@ -82,7 +82,7 @@ public class TestStudent {
         int errors = 0;
         for ( Student s : students )
         {
-            for ( String c : courses ) if ( ! s.courses.containsKey( c ) ) errors++; 
+            for ( String c : testCourses ) if ( ! s.courses.containsKey( c ) ) errors++; 
         }
         if ( errors == 0 )
         {

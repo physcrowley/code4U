@@ -11,8 +11,8 @@ public class Student {
 
     String name;
     int id;
-    Map<String, Double> courses;
-    double average;
+    Map<String, Double> courses; // clé : nom du cours, valeur : moyenne du cours
+    double average; // global
 
     //
     // CONSTRUCTEURS DE LA CLASSE
