@@ -1,16 +1,10 @@
+# String
+
+Copie des exemples dans les notes du cours. 
+
+>Le but est de copier chaque instruction ligne-par-ligne dans une session `jshell` pour voir le résultat.
+
 ```java
-
-import java.util.Scanner;
-
-/*
- * Copie des exemples dans les notes du cours. 
- * La plupart des méthodes n'ont aucune instruction de sortie. 
- * Le but est de copier chaque instruction ligne-par-ligne dans une session jshell 
- * pour voir le résultat.
- * @author physcrowley (2022-10)
- */
-
-
 // str.charAt(n)
 char[] s1 = { 'S', 't', 'r', 'i', 'n', 'g' }; 
 char c = s1[ 4 ]; // 'n'
@@ -52,7 +46,6 @@ String s1 = "blé";
 
 char[] c = {'b', 'l', 'é'};
 String s2 = new String( c );
-
 
 System.out.printf( "\ns1=%s  s2=%s\n\n", s1, s2 );
 System.out.println( "   ==   contre  a.equals(b)");

@@ -1,15 +1,16 @@
+# Tableaux
+
+Copie des exemples dans les notes du cours. 
+
+>Le but est de copier chaque instruction ligne-par-ligne dans une session `jshell` pour voir le résultat.
+
 ```java
-/*
- * Copie des exemples dans les notes du cours. Le but est de copier chaque
- * instruction ligne-par-ligne dans une session jshell pour voir le résultat.
- * @author physcrowley (2022-10)
- *
- */
 
 //
-// Instructions à copier dans jshell en lien avec les tableaux
+// Déclarations variées, index, length
 //
 
+// déclaration littérale
 int[] nums = {72, 51, 32, 94, 10, 61, 85, 76, 42, 20};
 
 nums[ 0 ];
@@ -28,8 +29,8 @@ char[] symbols = new char[ 97 ];
 String[] jours = { 
     "lundi", "mardi", "mercredi","jeudi", 
     "vendredi", "samedi", "dimanche" };
-
 jours[ 3 ];
+
 
 double[] prix = { 1.99, 5.99, 9.99, 14.99, 19.99, 149.99 };
 prix[ prix.length - 1 ];
