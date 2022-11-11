@@ -1,14 +1,16 @@
+# Utiliser la classe Formatter via printf et String.format
+
+Ces exercices sont ceux de la [présentation Google Slides](https://docs.google.com/presentation/d/1PY2C5CiXlKepv-A88xfAJskgtlpY2emlK9lNpg8x4oI/present) dans le manuel du cours.
+
+>Exemples à copier et à valider dans une session jshell
+
+## Caractères d'échappement
 ```java
-/*
- * Exemples à copier et à valider dans une session jshell
- */
-
-// --------- CARACTÈRES D'ÉCHAPPEMENT ---------------
-
 System.out.println("J'ai dit \"Oui, mon kiki!\""); // J'ai dit "Oui, mon kiki!"
+```
 
-// --------- TEXTE DE FORMAT ---------------
-
+## Texte de format
+```java
 String nom = "Kiki";
 String.format( "Mon nom est %s", nom );
 String.format( "Mon nom est %S", nom ); // majuscules
@@ -40,5 +42,4 @@ s = String.format( "%-8d  %-8d  %-8d", 8, 32, 128 ); // aligné à gauche
     // 8         32        128     .
 s = String.format( "%08d  %08d  %08d", 8, 32, 128 ); // rempli avec des 0
     // 00000008  00000032  00000128
-
 ```
