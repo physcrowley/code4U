@@ -17,7 +17,7 @@ public class Run {
     static Scanner console = new Scanner( System.console().reader() );
 
     /** Liste des billets réservés */
-    static List< Ticket > tickets = new ArrayList<>();
+    static List< Ticket > cart = new ArrayList<>();
 
     /** 
      * Simule une application d'achat de billets pour des événements
@@ -33,7 +33,7 @@ public class Run {
         System.out.println( "\n~~~~~~~~~~~ Billeterie ~~~~~~~~~~~~" );
         buyTickets();
         System.out.println();
-        if ( tickets.size() > 0 ) BoxOffice.printTickets( tickets );
+        if ( cart.size() > 0 ) BoxOffice.printTickets( cart );
 
         System.out.println( "\nMerci! À la prochaine!" );
     }
@@ -161,7 +161,7 @@ public class Run {
         {
             for ( int i = 0; i < quantity; i++ ) 
             {
-                tickets.add( BoxOffice.buyTicket( e, buyerName ) );
+                cart.add( BoxOffice.buyTicket( e, buyerName ) );
             }
         }
         else
