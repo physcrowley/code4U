@@ -85,9 +85,8 @@ public class SchoolApp {
                 player.addCourse( c ); // ajouter un cours
                 return true;
             }
-            System.out.println( "    Ce n'était pas un choix valide." );
         }
-        
+        System.out.println( "    Ce n'était pas un choix valide." );
         return true;
     }
     
