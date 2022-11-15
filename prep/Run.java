@@ -1,7 +1,6 @@
 package prep;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /** 
@@ -17,7 +16,7 @@ public class Run {
     static Scanner console = new Scanner( System.console().reader() );
 
     /** Liste des billets réservés */
-    static List< Ticket > cart = new ArrayList<>();
+    static ArrayList< Ticket > cart = new ArrayList<>();
 
     /** 
      * Simule une application d'achat de billets pour des événements
