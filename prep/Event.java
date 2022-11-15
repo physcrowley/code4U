@@ -1,7 +1,6 @@
 package prep;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Cette classe regroupe les informations associées aux événements, soit :
@@ -23,7 +22,7 @@ class Event
     //
 
     /** Liste de tous les événements */
-    static List< Event > list = new ArrayList<>();
+    static ArrayList<Event> list = new ArrayList<>();
 
     
     //
@@ -40,7 +39,7 @@ class Event
     int capacity;
 
     /** Liste de tous les billets vendus pour l'événement. */
-    List<Ticket> tickets = new ArrayList<>();
+    ArrayList<Ticket> tickets = new ArrayList<>();
 
     /** Drapeu à changer quand l'événement atteint sa capacité */
     boolean full = false;

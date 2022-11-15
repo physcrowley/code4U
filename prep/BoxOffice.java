@@ -2,7 +2,7 @@ package prep;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Cette classe déclare plusieurs méthodes {@code static} qui sont utiles
@@ -132,7 +132,7 @@ class BoxOffice {
 
 
     /** Afficher les billets individuels dans un fichier ou à l'écran */
-    static void printTickets( List<Ticket> tix )
+    static void printTickets( ArrayList<Ticket> tix )
     {
         // produire les billets
         StringBuilder output = new StringBuilder();
