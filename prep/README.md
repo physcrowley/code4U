@@ -1,36 +1,31 @@
-# Préparation à la programmation orientée-objet
+# Préparation à l'orienté-objet
 
-Ce package introduit quelques concepts de base à la programmation orienté-objet :
+Ces exemples introduisent trois idées majeurs :
 
-* La création de nouveaux **types** (parfois appelés struct ou record) : des classes simplement regroupant des informations utiles ensemble
-* L'idée d'**objets** (ou **instances** de classes) qui ont chacun leurs copies des variables déclarées dans la **classe** qui définit le type
-* L'idée de variables `static` - où liées directement à une classe et non à ses objets
-* L'idée de **modules** qui regroupent des méthodes utiles pouvant être utilisées par d'autres classes (comme le module Math de la bibliothèque standard)
-* L'idée de méthodes `static` - celles qui doivent être appelées en référant à la classe et non à ses objets.
+* **packages** - des emballages de classes (des dossiers) et comment ça influence les commandes `javac` et `java`
+* **types** (ou struct ou record ) - des classes qui regroupent uniquement des variables (qu'on appelle des *champs*), nous permettant de décrire un nouveau type de données composé de types existants.
+* **modules** - des classes qui regroupent des méthodes à être utilisées par d'autres classes
 
+Le tout se fait en deux parties : simplifiée et réaliste.
 
->Aucune de ces classes - les types/struct/records ou les modules - ne contiennent de méthode `main`. Seulement une classe qui décrit la logique du programme inclut la méthode `main`.
+## Simplifiée
 
-## Types
+Le package `prep.basic` inclut trois classes :
+* `MyType` (l'exemple d'un nouveau type)
+* `MyModule` (l'exemple d'un module)
+* `Run` (la classe qui inclut la méthode `main` et qui ressemble aux programmes qu'on connaît déjà)
 
-Les classes suivantes définissent des types :
-* `Event`
-* `Ticket`
+Ce package est très simple afin de rendre plus clair les idées.
 
-## Modules
+>On lance ce projet avec le script `./runBasicPrep/ps1`. Vous pouvez ouvrir ce fichier pour lire les commentaires et voir les commandes javac et java.
 
-La classe suivante définit un module :
-* `BoxOffice`
+## Réaliste
 
-## Application
+Le package `prep.realistic` inclut quatre classes :
+* `Event` et `Ticket` (nouveaux types)
+* `BoxOffice` (le module)
+* `Run` (la classe qui inclut la méthode `main` et qui ressemble aux programmes qu'on connaît déjà)
 
-La classe suivante inclut une méthode `main` pour utiliser tous ces outils. Elle inclut aussi quelques méthodes `private` pour rendre le code plus modulaire.
-* `Run`
+Ce package est plus complexe dans sa structure mais montre comment on pourrait se servir des idées de types et de modules dans un projet qui fait quelque chose d'utile.
 
-# Instructions 
-
-## Lire
-Ouvrir les différentes classes, notamment les 3 types, et lire le code source pour voir comment les choses sont structurées.
-
-## Compiler et lancer le projet
-Vous pouvez simultanément compiler et lancer le programme avec le script `.\prepRun.ps1`.
+>On lance ce projet avec le script `./runRealisticPrep/ps1`. Vous pouvez ouvrir ce fichier pour lire les commentaires et voir les commandes javac et java.

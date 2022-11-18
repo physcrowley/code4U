@@ -1,4 +1,4 @@
-package prep;
+package prep.realistic;
 
 /** 
  * Contient les informations de base associés à un billet : l'événement

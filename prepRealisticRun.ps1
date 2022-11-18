@@ -7,8 +7,8 @@
 #     pour rendre le script exécutable.
 #
 
-javac ./prep/*.java
-java prep.Run
+javac ./prep/realistic/*.java
+java prep.realistic.Run
 
 # Note 1 : si tous les fichiers sont déjà compilés, c'est plus vite de simplement
 # lancer `java prep.Run` au lieu de lancer ce script

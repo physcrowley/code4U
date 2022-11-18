@@ -1,4 +1,4 @@
-package prep;
+package prep.realistic;
 
 import java.util.ArrayList;
 import java.util.Scanner;

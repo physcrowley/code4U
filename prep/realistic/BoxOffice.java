@@ -1,4 +1,4 @@
-package prep;
+package prep.realistic;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -148,7 +148,7 @@ class BoxOffice {
         try
         {
             // écrire le résultat dans un fichier
-            String outFile = "./prep/billets.txt";
+            String outFile = "./prep/realistic/billets.txt";
             FileWriter toFile = new FileWriter( new File( outFile ) );
             toFile.write( output.toString() );
             toFile.close();
