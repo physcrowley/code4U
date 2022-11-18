@@ -20,14 +20,18 @@ Voir [la vidéo de Objects First With Java](https://www.youtube.com/watch?v=CPUa
 * objet
 * instance
 
-## Pour compiler et lancer les programmes
+## Lire le code source
 
-### TestMyObject
-```powershell
-javac .\objects\basic\TestMyObject.java | java objects.basic.TestMyObject
-```
+Pour connaître la structure et les fonctionnalités de l'objet qu'on définit, lire la classe `MyObject`. Cette classe inclut :
+* le champs de l'objet
+* une méthode spéciale qui s'appelle le **constructeur**
+* d'autres méthodes pour manipuler les champs de l'objet
 
-### App
+Pour voir comment des objets sont créés à partir de la classe `MyObject`, lire la classe `App`. Cette classe contient :
+* la méthode `main` qui structure un programme semblable à ce que nous connaissons déjà, tout en déclarant des variables de type `MyObject`.
+
+## Pour compiler et lancer le programme
+
 ```powershell
 javac .\objects\basic\App.java
 java objects.basic.App
