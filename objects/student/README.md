@@ -1,19 +1,24 @@
-# Introduction aux objets
+# Un exemple d'application qui utilise un objet
 
-Ce package inclut une introduction aux objets, incluant :
+Ce package se rapproche du contenu d'un projet Java complet :
+* des classes qui définissent des objets (`Student`)
+* des classes pour tester les méthodes dans nos objets (`TestStudent`)
+* une classe d'application qui utilise les objets (`SchoolApp`)
 
-* La distinction entre **classe**, **objet** et **instance**
-* Le contenu de classes qui forment des objets
-* La création d'objets dans un programme
+## Lire le code source
 
+Pour connaître la structure et les fonctionnalités de l'objet, lire le code dans la classe `Student`.
 
-## Distinctions
+Pour voir quelques exemples de **tests unitaires**, lire le code source dans la classe `TestStudent`. Cette classe inclut :
+* une méthode qui teste chacune des méthodes dans la classe Student
+* une méthode `main` qui appelle chacune des méthodes de test pour les lancer.
 
-Voir [la vidéo de Objects First With Java](https://www.youtube.com/watch?v=CPUaTT0Xoo4) pour une courte introduction aux termes 
-
-* classe
-* objet
-* instance
+Pour voir la logique de l'application qui simule une année scolaire pour un élève, voir la classe `SchoolApp`. Cette classe inclut :
+* des méthodes `private` qui rend le code dans `main` plus lisible en encapsulant les algorithmes pour les différentes parties du programme
+* la méthode `main` qui est responsable de :
+    * produire l'interface utilisateur (les print et les scan)
+    * vérifier les valeurs saisies par l'utilisateur
+    * structurer logiquement les appels de fonctions
 
 ## Pour compiler et lancer les programmes
 
@@ -27,11 +32,3 @@ javac .\objects\student\TestStudent.java | java objects.student.TestStudent
 javac .\objects\student\SchoolApp.java
 java objects.student.SchoolApp
 ```
-
-## Du nouveau 🌟 : Un peu sur les HashMap
-
-La classe `Student` inclut un nouvel objet de la bibliothèque standard : un `Map`, concrètement un `HashMap`.
-
-Les caractéristiques des maps, aussi appelés des dictionnaires, sont que les entrées sont des paires **clé : valeur**. La clé peut être n'importe quel type de donnée. On l'utilise pour faire référence à la valeur, qui peut aussi être n'importe quel type de donnée.
-
-Voici [un bref tutoriel sur W3Schools](https://www.w3schools.com/java/java_hashmap.asp).
