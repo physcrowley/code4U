@@ -10,22 +10,20 @@ public class MyObject {
     double rating;
 
     //
-    // Méthodes
+    // Méthode constructeur
+    // Cette méthode spéciale est appelée avec le mot-clé new
     //
 
-    /**
-     * Méthode constructeur<p>
-     * Cette méthode est appelé quand on utilise le mot-clé {@code new}
-     * @param n le nom
-     * @param h les points de santé
-     * @param r la cote de performance
-     */
     public MyObject( String n, int h, double r )
     {
         this.name = n;
         this.health = h;
         this.rating = r;
     }
+
+    //
+    // Méthodes pour manipuler les champs
+    //
 
     void updateName( String n ) { this.name = n; }
 
