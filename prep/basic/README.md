@@ -10,4 +10,4 @@
 Ouvrir les différentes classes et lire le code source pour voir comment les choses sont structurées.
 
 ## Compiler et lancer le projet
-Vous pouvez simultanément compiler et lancer le programme avec le script `.\prepBasicRun.ps1`.
+Vous pouvez simultanément compiler et lancer le programme avec le script `./prepBasicRun.ps1`.

@@ -1,15 +1,15 @@
 # Commandes Java pour compiler et lancer les classes dans le package base.
 #
-# USAGE : taper `./baseRun.ps1 [NomDeLaClasse]` dans Powershell
-# à partir de ce dossier. P. ex. : `./baseRun.ps1 Equals` ou `./baseRun.ps1 Methods`
+# USAGE : taper `./baseRun.sh [NomDeLaClasse]` dans bash ou zsh
+# à partir de ce dossier. P. ex. : `./baseRun.sh Equals` ou `./baseRun.sh Methods`
 # 
-#     Sur Bash ou Zsh, utiliser plutôt la version `baseRun.sh` qui contient
-#     la syntaxe appropriée pour traiter les arguments Linux/MacOS
+# Avant la première utilisation, taper `chmod +x ./baseRun.sh`  
+# pour rendre le script exécutable.
 #
 
 # former les arguments pour javac et java
-$file = "./base/" + $args[0] + ".java"
-$class = "base." + $args[0]
+file="./base/$1.java"
+class="base.$1"
 # appeler les commandes javac et java
 javac $file
 java $class

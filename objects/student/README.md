@@ -24,11 +24,12 @@ Pour voir la logique de l'application qui simule une année scolaire pour un él
 
 ### TestStudent
 ```powershell
-javac .\objects\student\TestStudent.java | java objects.student.TestStudent
+javac ./objects/student/TestStudent.java
+java objects.student.TestStudent
 ```
 
 ### SchoolApp
 ```powershell
-javac .\objects\student\SchoolApp.java
+javac ./objects/student/SchoolApp.java
 java objects.student.SchoolApp
 ```

@@ -33,6 +33,6 @@ Pour voir comment des objets sont créés à partir de la classe `MyObject`, lir
 ## Pour compiler et lancer le programme
 
 ```powershell
-javac .\objects\basic\App.java
+javac ./objects/basic/App.java
 java objects.basic.App
 ```
