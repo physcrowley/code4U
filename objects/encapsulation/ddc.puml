@@ -1,0 +1,51 @@
+/' Copier-coller sur https://www.planttext.com/ ou activer l'extension PlantUML (jebbs) '/
+
+@startuml encapsulation
+
+/' https://plantuml.com/fr/theme
+    favoris : mars, plain, amiga, crt-green, sketchy, sketchy-outline '/
+!theme sketchy
+
+/' garder les symboles de visibilité simples '/
+skinparam classAttributeIconSize 0
+
+
+/' https://plantuml.com/fr/class-diagram '/
+
+class Circle {
+    - radius : double
+    - area : double
+    - perimeter : double
+    - colour : String 
+    + getR() : double
+    + getA() : double
+    + getP() : double
+    + getColour() : String
+    + setColour( String ) : void
+    + setR( double ) : void
+    + Circle( double, String )
+}
+
+@enduml
+
+@startuml encapsulation_fancy
+
+!theme sketchy
+
+/' removed skinparam iconsize = 0 so icons replace +/- '/
+
+class Circle {
+    - radius : double
+    - area : double
+    - perimeter : double
+    - colour : String 
+    + getR() : double
+    + getA() : double
+    + getP() : double
+    + getColour() : String
+    + setColour( String ) : void
+    + setR( double ) : void
+    + Circle( double, String )
+}
+
+@enduml
