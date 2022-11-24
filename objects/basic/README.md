@@ -3,7 +3,7 @@
 Ce package inclut une introduction aux objets, incluant :
 
 * La distinction entre **classe**, **objet** et **instance**
-* Le contenu de classes qui forment des objets
+* Le contenu de classes qui définissent des objets
 * La création d'objets dans un programme
 
 ## Liens avec la préparation à l'orienté-objet
