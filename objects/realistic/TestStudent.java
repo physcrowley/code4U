@@ -1,4 +1,4 @@
-package objects.student;
+package objects.realistic;
 
 public class TestStudent {
     

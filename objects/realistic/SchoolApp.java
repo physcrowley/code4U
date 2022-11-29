@@ -1,4 +1,4 @@
-package objects.student;
+package objects.realistic;
 
 import java.util.Arrays;
 import java.util.Scanner;
