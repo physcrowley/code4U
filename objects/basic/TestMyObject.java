@@ -1,6 +1,6 @@
 package objects.basic;
 
-public class App {
+public class TestMyObject {
     public static void main(String[] args) {
         // Créer des variables de mon nouveau type
         MyObject a = new MyObject("elf", 100, 82.5); 
