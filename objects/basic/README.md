@@ -27,12 +27,14 @@ Pour connaître la structure et les fonctionnalités de l'objet qu'on définit, 
 * une méthode spéciale qui s'appelle le **constructeur**
 * d'autres méthodes pour manipuler les champs de l'objet
 
-Pour voir comment des objets sont créés à partir de la classe `MyObject`, lire la classe `App`. Cette classe contient :
+Pour voir comment des objets sont créés à partir de la classe `MyObject`, lire la classe `TestMyObject`. Cette classe contient :
 * la méthode `main` qui structure un programme semblable à ce que nous connaissons déjà, tout en déclarant des variables de type `MyObject`.
+
+>Noter que vous ne pouvez pas lancer la classe `MyObject` comme programme (il ne contient pas de méthode `main`). C'est normal : le but d'une classe qui définit un objet est simplement ça, la définition. Ces classes sont utilisées par d'autres classes, comme la classe `TestMyObject`.
 
 ## Pour compiler et lancer le programme
 
 ```powershell
-javac ./objects/basic/App.java
-java objects.basic.App
+javac ./objects/basic/TestMyObject.java
+java objects.basic.TestMyObject
 ```
