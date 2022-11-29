@@ -1,4 +1,4 @@
-# Enscapsulation
+# Encapsulation
 
 En programmation orientée objet, le concept d'encapsulation vise à protéger les données en les déclarant `private` dans la classe tout en définissant des méthodes publiques pour les modifier ou pour y accéder. Bref :
 
@@ -25,6 +25,6 @@ La classe `CircleGenerator` produit plusieurs objets de type Circle et utilise s
 
 ### CircleGenerator
 ```powershell
-javac ./objects/encapsulation/CircleGenerator.java
-java objects.encapsulation.CircleGenerator
+javac ./encapsulation/basic/CircleGenerator.java
+java encapsulation.basic.CircleGenerator
 ```

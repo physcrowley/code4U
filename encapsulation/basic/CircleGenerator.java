@@ -1,4 +1,4 @@
-package objects.encapsulation;
+package encapsulation.basic;
 
 public class CircleGenerator {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package objects.encapsulation;
+package encapsulation.basic;
 
 public class Circle {
 
