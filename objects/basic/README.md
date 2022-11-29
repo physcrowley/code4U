@@ -27,7 +27,7 @@ Pour connaître la structure et les fonctionnalités de l'objet qu'on définit, 
 * une méthode spéciale qui s'appelle le **constructeur**
 * d'autres méthodes pour manipuler les champs de l'objet
 
-Pour voir comment des objets sont créés à partir de la classe`MyObject`, lire la classe `App`. Cette classe contient :
+Pour voir comment des objets sont créés à partir de la classe `MyObject`, lire la classe `App`. Cette classe contient :
 * la méthode `main` qui structure un programme semblable à ce que nous connaissons déjà, tout en déclarant des variables de type `MyObject`.
 
 ## Pour compiler et lancer le programme
