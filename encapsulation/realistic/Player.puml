@@ -1,0 +1,64 @@
+/' Copier-coller sur https://www.planttext.com/ ou activer l'extension PlantUML (jebbs) '/
+
+@startuml player
+
+/' https://plantuml.com/fr/theme
+    favoris : mars, plain, amiga, crt-green, sketchy, sketchy-outline '/
+!theme mars
+
+/' garder les symboles de visibilité simples 
+skinparam classAttributeIconSize 0 '/
+
+
+/' https://plantuml.com/fr/class-diagram '/
+
+/' objets '/
+class Weapon {
+    - name: String 
+    - strength: int
+    + getName(): String
+    + getStrength(): int
+    + equals(Object): boolean
+    + toString(): String
+}
+
+class Spawn {
+    - race: String 
+    - weapon: Weapon
+    - power: int 
+    + getRace(): String 
+    + getWeapon(): Weapon
+    + getPower(): int
+}
+
+class Player {
+    - name: String 
+    - type: Spawn
+    - weapon: Weapon
+    - health: int
+    - power: int
+    - weapons: ArrayList<Weapon>
+    - types: ArrayList<Spawn> {static}
+    + Player(String, String)
+    + name(): String
+    + type() : String
+    + weapon(): String
+    + health(): int
+    + power(): int
+    + weaponsList(): ArrayList<Weapon>
+    + addWeapon(Weapon): void
+    + changeWeapon(Weapon): void
+    + healthBoost(int): void
+    + takeDamage(int): void
+    + isDead(): boolean
+    + powerBoost(int): void
+    + powerLoss(int): void
+    + toString(): String
+}
+
+
+/' relations '/
+Player -- Spawn
+Spawn -- Weapon
+
+@enduml
