@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Player {
 
     //
-    // Champs encapsulés pour les instances
+    // Champs encapsulés des instances
     //
 
     private String name;
@@ -23,7 +23,12 @@ public class Player {
 
     private static ArrayList<Spawn> types = new ArrayList<>();
     
-    //charger les types possibles et leurs valeurs initiales
+    /* 
+     * charger les types possibles et leurs valeurs initiales
+     * 
+     * ce code, dans le bloc static {}, sera exécutée dès que la classe est
+     * chargée en mémoire même si aucune instance n'est créée.
+     */
     static {
         types.add( new Spawn("Elfe", 40, new Weapon("arc et flèche", 10) ) );
         types.add( new Spawn("Sorcier", 80, new Weapon("amulette de puissance", 10) ) );
@@ -37,9 +42,9 @@ public class Player {
      * @param t le type du Player
      */
     public Player( String n, String t) {
-        // valeurs selon le type
+        // assigner le type selon le nom fourni
         for (Spawn s : types ) {
-            if ( t.equalsIgnoreCase( s.getRace() ) ) {
+            if ( t.equalsIgnoreCase( s.race() ) ) {
                 type = s;
             }
         }
@@ -52,9 +57,9 @@ public class Player {
         // valeurs automatiques
         name = n;
         health = 100;
-        power = type.getPower();
+        power = type.power();
         weapons = new ArrayList<>();
-        weapon = type.getWeapon();
+        weapon = type.weapon();
         weapons.add( weapon );
     }
 
@@ -63,8 +68,8 @@ public class Player {
     //
 
     public String name() { return name; }
-    public String type() { return type.getRace(); }
-    public String weapon() { return weapon.getName(); }
+    public String type() { return type.race(); }
+    public String weapon() { return weapon.name(); }
     public int power() { return power; }
     public int health() { return health; }
     public ArrayList<Weapon> weaponsList() { return weapons; }
@@ -74,15 +79,15 @@ public class Player {
     //
     
     public void changeWeapon( Weapon w ) {
-        int old = weapon.getStrength(); // puissance actuelle du Weapon
-        addWeapon(w); // ajouter le nouveau Weapon s'il n'est pas déjà dans la liste
+        int old = weapon.strength(); // puissance actuelle du Weapon
+        addWeapon(w); // ajouter le nouveau Weapon à la liste
         weapon = w; // changer le Weapon actif
-        power += weapon.getStrength() - old ; // ajuster la puissance
+        power += weapon.strength() - old ; // ajuster la puissance
     }
 
     public void addWeapon( Weapon w ) {
-        if ( ! weapons.contains( w ) ) {
-            weapons.add( w );
+        if ( ! weapons.contains( w ) ) { 
+            weapons.add( w ); // seulement s'il n'est pas déjà dans la liste
         }
     }
 
@@ -111,7 +116,7 @@ public class Player {
     public String toString() {
         return String.format(
             "%s (%s): santé=%d, puissance=%d, arme=%s\n\tarmes=%s",
-            name, type.getRace(), health, power, weapon, weapons
+            name, type.race(), health, power, weapon, weapons
         );
     }
 }

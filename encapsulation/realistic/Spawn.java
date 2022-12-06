@@ -23,8 +23,8 @@ public class Spawn {
     /*
      * Méthodes accesseurs
      */
-    public String getRace() { return race; }
-    public int getPower() { return power; }
-    public Weapon getWeapon() { return weapon; }
+    public String race() { return race; }
+    public int power() { return power; }
+    public Weapon weapon() { return weapon; }
     
 }

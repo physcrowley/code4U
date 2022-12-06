@@ -16,8 +16,8 @@ skinparam classAttributeIconSize 0 '/
 class Weapon {
     - name: String 
     - strength: int
-    + getName(): String
-    + getStrength(): int
+    + name(): String
+    + strength(): int
     + equals(Object): boolean
     + toString(): String
 }
@@ -26,9 +26,9 @@ class Spawn {
     - race: String 
     - weapon: Weapon
     - power: int 
-    + getRace(): String 
-    + getWeapon(): Weapon
-    + getPower(): int
+    + race(): String 
+    + weapon(): Weapon
+    + power(): int
 }
 
 class Player {
@@ -58,7 +58,8 @@ class Player {
 
 
 /' relations '/
-Player -- Spawn
-Spawn -- Weapon
+Player *- Spawn : utilise
+Spawn *-- Weapon : utilise
+Player *-- Weapon : utilise
 
 @enduml
