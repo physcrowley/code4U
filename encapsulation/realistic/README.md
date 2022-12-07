@@ -33,8 +33,8 @@ Vous pouvez lire le commentaire de bloc dans le code source pour plus de détail
 
 Le programme test est définie dans la classe TestPlayer. Utiliser les commandes suivantes
 
-```powershell
-javac .\encapsulation\realistic\TestPlayer.java
+```bash
+javac ./encapsulation/realistic/TestPlayer.java
 java encapsulation.realistic.TestPlayer
 ```
 
