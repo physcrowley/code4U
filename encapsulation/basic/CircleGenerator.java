@@ -11,15 +11,15 @@ public class CircleGenerator {
         blue.setColour("cyan");
         red.setColour("bourgogne");
 
-        blue.setR( red.getR() + 2 );
+        blue.setR(red.getR() + 2);
 
         showCircle(blue);
         showCircle(red);
     }
 
-    private static void showCircle( Circle c ) {
+    private static void showCircle(Circle c) {
         System.out.printf("%s: r=%.2f, aire=%.2f, périmètre=%.2f\n",
-           c.getColour(), c.getR(), c.getA(), c.getP() );
+                c.getColour(), c.getR(), c.getA(), c.getP());
     }
-    
+
 }

@@ -11,11 +11,10 @@ import java.util.ArrayList;
  * (autrement appelées des champs).
  * 
  * Ce type inclut un champ déclaré STATIC. C'est un champ qui appartient à la
- * classe et non aux objets de type Event. 
+ * classe et non aux objets de type Event.
  * 
  */
-class Event 
-{
+class Event {
 
     //
     // Champ STATIC - associée directement à la classe et non à ses objets
@@ -24,14 +23,13 @@ class Event
     /** Liste de tous les événements */
     static ArrayList<Event> list = new ArrayList<>();
 
-    
     //
     // Champs liés aux objets / instances de la classe
     //
     // Chaque objet de type Event a une copie de ces variables
     // qui contiennent des valeurs qui sont propres à cet objet.
     //
-    
+
     /** Nom de l'événement */
     String name;
 

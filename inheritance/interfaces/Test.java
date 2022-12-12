@@ -12,19 +12,19 @@ interface Attack {
 
 class SwordAttack implements Attack {
     public void attack() {
-        System.out.println( "Coup d'épée!!!" );
+        System.out.println("Coup d'épée!!!");
     }
 }
 
 class MagicAttack implements Attack {
     public void attack() {
-        System.out.println( "Boule de feu!!" );
+        System.out.println("Boule de feu!!");
     }
 }
 
 class FistAttack implements Attack {
     public void attack() {
-        System.out.println( "Coup de poing!!" );
+        System.out.println("Coup de poing!!");
     }
 }
 
@@ -36,19 +36,33 @@ class FistAttack implements Attack {
 class Player {
     private Attack attack; // champ de type interface
     private String type;
-    public Player( String t ) { setType( t ); }
-    public void setType( String t ) { 
+
+    public Player(String t) {
+        setType(t);
+    }
+
+    public void setType(String t) {
         type = t;
         setAttack(); // doit modifier l'attaque en conséquence
     }
+
     /** Assigne l'implémentation appropriée au champ = polymorphisme */
     private void setAttack() {
-        if ( type.equals("knight") ) attack = new SwordAttack();
-        else if ( type.equals("mage") ) attack = new MagicAttack();
-        else if ( type.equals("ninja") ) attack = new FistAttack();
+        if (type.equals("knight"))
+            attack = new SwordAttack();
+        else if (type.equals("mage"))
+            attack = new MagicAttack();
+        else if (type.equals("ninja"))
+            attack = new FistAttack();
     }
-    public String type() { return type; }
-    public void attack() { attack.attack(); }
+
+    public String type() {
+        return type;
+    }
+
+    public void attack() {
+        attack.attack();
+    }
 }
 
 //
@@ -56,12 +70,12 @@ class Player {
 //
 
 public class Test {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         Player sir = new Player("knight");
         Player gandalf = new Player("mage");
         Player bruce = new Player("ninja");
-        sir.attack();     // "Coup d'épée!!!"
+        sir.attack(); // "Coup d'épée!!!"
         gandalf.attack(); // "Boule de feu!!"
-        bruce.attack();   // "Coup de poing!!"
+        bruce.attack(); // "Coup de poing!!"
     }
 }

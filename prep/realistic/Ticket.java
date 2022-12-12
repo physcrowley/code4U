@@ -1,10 +1,10 @@
 package prep.realistic;
 
-/** 
+/**
  * Contient les informations de base associés à un billet : l'événement
  * et le nom du participant
  * <p>
- * Cette classe est un exemple de type / struct / record contenant juste des 
+ * Cette classe est un exemple de type / struct / record contenant juste des
  * variables de classe (autrement appelées des champs).
  */
 class Ticket {

@@ -3,7 +3,7 @@ package encapsulation.realistic;
 public class Weapon {
 
     //
-    // Champs encapsulés des instances 
+    // Champs encapsulés des instances
     //
 
     private String name;
@@ -11,10 +11,11 @@ public class Weapon {
 
     /**
      * Constructeur
+     * 
      * @param n le nom du Weapon
      * @param s la force du Weapon
      */
-    public Weapon( String n, int s ) {
+    public Weapon(String n, int s) {
         name = n;
         strength = s;
     }
@@ -22,8 +23,13 @@ public class Weapon {
     //
     // Méthodes accesseurs
     //
-    public String name() { return name; }
-    public int strength() { return strength; }
+    public String name() {
+        return name;
+    }
+
+    public int strength() {
+        return strength;
+    }
 
     //
     // Méthode de comparaison
@@ -31,7 +37,7 @@ public class Weapon {
 
     /*
      * Cette méthode nous permet de comparer deux Weapons comme on veut.
-     * La méthode equals() est définie dans java.lang.Object et cette 
+     * La méthode equals() est définie dans java.lang.Object et cette
      * version est utilisée par défaut si on ne définie pas notre propre
      * version, comme la méthode toString().
      * 
@@ -44,17 +50,17 @@ public class Weapon {
      * deux ne sont pas égaux.
      */
     @Override
-    public boolean equals( Object o ) {
+    public boolean equals(Object o) {
         try {
             // si o est un Weapon, ne plantera pas
             Weapon other = (Weapon) o;
             // si les champs des deux Weapon sont identiques
-            if ( name.equals( other.name() ) && strength == other.strength() ) {
+            if (name.equals(other.name()) && strength == other.strength()) {
                 return true;
-            } 
+            }
             // sinon
             return false;
-        } catch( Exception e ) { // a planté parce qu'o n'est pas un Weapon
+        } catch (Exception e) { // a planté parce qu'o n'est pas un Weapon
             return false;
         }
     }
