@@ -54,6 +54,7 @@ class Player {
             attack = new MagicAttack();
         else if (type.equals("ninja"))
             attack = new FistAttack();
+        else attack = null;
     }
 
     public String type() {
