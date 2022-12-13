@@ -1,7 +1,7 @@
 package inheritance.basic;
 
 public class Animal {
-    // mot-clé protected pour les rendre héritable
+    // mot-clé protected pour les rendre héritables
     protected String name;
     protected int legs;
 
