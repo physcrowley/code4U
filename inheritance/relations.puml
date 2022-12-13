@@ -1,0 +1,25 @@
+/' https://plantuml.com/fr/class-diagram '/
+
+@startuml manual 
+
+/' objets '/
+class Parent
+class Enfant
+interface Interface
+class ImplementedInterface
+
+/' relations '/
+Parent <|-- Enfant
+Interface <|.. ImplementedInterface 
+
+@enduml
+
+@startuml keywords 
+
+/' objets '/
+class Parent
+class Enfant extends Parent
+interface Interface
+class ImplementedInterface implements Interface 
+
+@enduml

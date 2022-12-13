@@ -1,0 +1,14 @@
+/' https://plantuml.com/fr/class-diagram '/
+
+@startuml composition
+
+/' objets '/
+class App 
+class ComposedObject
+class BaseObject
+
+/' relations '/
+ComposedObject *-- BaseObject : a un
+App -- ComposedObject : utilise
+
+@enduml
