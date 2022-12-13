@@ -1,8 +1,9 @@
 package inheritance.basic;
 
 public class Animal {
-    private String name;
-    private int legs;
+    // mot-clé protected pour les rendre héritable
+    protected String name;
+    protected int legs;
 
     public Animal(String n, int legs) {
         name = n;
