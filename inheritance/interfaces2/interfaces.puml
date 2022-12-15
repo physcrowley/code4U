@@ -1,0 +1,45 @@
+/' Copier-coller sur https://www.planttext.com/ ou activer l'extension PlantUML (jebbs) '/
+
+@startuml interfaces
+
+/' https://plantuml.com/fr/theme
+    favoris : mars, plain, amiga, crt-green, sketchy, sketchy-outline '/
+!theme mars
+
+/' garder les symboles de visibilité simples 
+skinparam classAttributeIconSize 0 '/
+
+
+/' https://plantuml.com/fr/class-diagram '/
+
+/' OBJETS '/
+interface Attack {
+    attack(): void
+}
+
+/' Avec le mot clé implements, le bon type de lien
+apparaît automatiquement dans le diagramme '/
+class MagikAttack implements Attack
+class SwordAttack implements Attack
+class FistAttack implements Attack
+
+class Player {
+    - attack: Attack
+    - type: String
+    + Player(String)
+    + setType(String)
+    - setAttack()
+    + type(): String
+    + attack(): void
+}
+
+class Test {
+    + main(String[]): void
+}
+
+/' RELATIONS
+Pour la composition et l'utilisation, il faut spécifier le lien manuellement '/
+Test -- Player : utilise
+Player *- Attack : a un
+
+@enduml
