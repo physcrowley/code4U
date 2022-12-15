@@ -1,3 +1,4 @@
+package inheritance.interfaces;
 //
 // Interface
 //
