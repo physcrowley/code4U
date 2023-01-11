@@ -39,7 +39,7 @@ class Test {
 
 /' RELATIONS
 Pour la composition et l'utilisation, il faut spécifier le lien manuellement '/
-Test -- Player : utilise
-Player *- Attack : a un
+Test --> Player : utilise
+Player *-> Attack : a un
 
 @enduml
